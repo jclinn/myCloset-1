@@ -1,0 +1,36 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+	color: #CC00AA;
+	text-align: center;
+	background-color:#b0c4de;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #CC00AA;
+}
+
+body { 
+	background: #7ac8ff; 
+	margins: 0; 
+	padding: 0;
+}
+
+img.img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.button {
+	padding-top:100px;
+	text-align: center;
+	margin: 0px auto;
+}
+
+.gentext {
+	padding-top:150px;
+	text-align: center;
+}

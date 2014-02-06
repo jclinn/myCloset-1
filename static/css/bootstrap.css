@@ -66,7 +66,6 @@ audio:not([controls]) {
 }
 
 html {
-  height: 100%;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -6277,7 +6276,7 @@ a.badge:focus {
     bottom: 0; 
     left: 0;
     width: 100%;
-}
+  text-align: center;}
 
 
 .leftpaddings {

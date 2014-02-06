@@ -231,7 +231,7 @@ body {
 }
 
 a {
-  color: #0088cc;
+  color: #933c13;
   text-decoration: none;
 }
 
@@ -809,7 +809,7 @@ h4 small {
   border-bottom: 1px solid #eeeeee;
 }
 
-ul,
+
 ol {
   padding: 0;
   margin: 0 0 10px 25px;
@@ -3933,13 +3933,26 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav {
-  margin-bottom: 20px;
-  margin-left: 0;
+  border: 2px solid #933c13;
+  border-width:1px 0;
   list-style: none;
+  padding:0;
+  text-align: center;
+  background: #f5bd56;
+}
+.nav li {
+  display:inline;
 }
 
+.nav a {
+  display:inline-block;
+  padding:12px;
+}
 .nav > li > a {
-  display: block;
+  display: inline-block;
+  margin-left:0;
+  font-color:#933c13;
+
 }
 
 .nav > li > a:hover,
@@ -4376,6 +4389,7 @@ input[type="submit"].btn.btn-mini {
      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
+
 
 .navbar-inner:before,
 .navbar-inner:after {
@@ -6185,6 +6199,11 @@ a.badge:focus {
    font-family: 'clemente';
    src: url('../fonts/clemente.ttf');
 }
+@font-face {
+   font-family: 'koushikiL';
+   src: url('../fonts/koushikiL.otf');
+}
+
 .logo {
     font-family: 'Dosis';
     color: #fdf1b6;
@@ -6231,7 +6250,7 @@ a.badge:focus {
 }
 
 .btncolor {
-  font-family:'hype';
+  font-family:'koushikiL';
   color: #454545;
   font-size: 20px;
 }
@@ -6254,4 +6273,56 @@ a.badge:focus {
 
 #bonuspadding {
   padding-bottom: 20px;
+}
+
+.leftpaddings {
+  padding-left:20px;
+}
+
+.specialcontainer {
+  position: relative;
+  width: 950px;
+  text-align: center;
+}
+
+.bottomfixed2 {
+  position: absolute;
+  bottom:0;
+}
+
+.tops {
+  background: url('../img/tops-bar.png');
+}
+
+.shoes {
+  background: url('../img/shoes-bar.png');
+}
+
+.pants {
+  background: url('../img/pants-bar.png');
+}
+
+.extra {
+  background: url('../img/extra-bar.png');
+}
+
+.btn_category {
+  display: inline-block;
+  color: #689879;
+  padding: 23px 114.5px ;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
 }

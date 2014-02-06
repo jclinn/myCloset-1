@@ -66,6 +66,7 @@ audio:not([controls]) {
 }
 
 html {
+  height: 100%;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -6264,6 +6265,7 @@ a.badge:focus {
   font-family:'koushikiL';
   color: #454545;
   font-size: 20px;
+   box-shadow: 0px 1px 10px #5E5E5E;
 }
 .formatcenter {
   text-align: center;
@@ -6275,7 +6277,6 @@ a.badge:focus {
     bottom: 0; 
     left: 0;
     width: 100%;
-    text-align: center;
 }
 
 
@@ -6290,8 +6291,11 @@ a.badge:focus {
 }
 
 .bottomfixed2 {
-  position: absolute;
+  position: fixed;
   bottom:0;
+  width: 100%;
+  text-align: center;
+  margin:0;
 }
 
 .tops {
@@ -6322,7 +6326,6 @@ a.badge:focus {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-user-select: none;

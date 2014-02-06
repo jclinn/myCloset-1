@@ -6265,11 +6265,9 @@ a.badge:focus {
     bottom: 0; 
     left: 0;
     width: 100%;
+    text-align: center;
 }
 
-.paddings {
-  padding-top: 250px;
-}
 
 .leftpaddings {
   padding-left:20px;

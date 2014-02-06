@@ -3939,7 +3939,7 @@ input[type="submit"].btn.btn-mini {
   padding:0;
   text-align: center;
   background: #f5bd56;
-  box-shadow: 0px 1px 20px #5E5E5E;
+  box-shadow: 0px 1px 10px #5E5E5E;
 }
 .nav li {
   display:inline;
@@ -6212,7 +6212,7 @@ a.badge:focus {
     border-radius:10px;
     background-color: #B34714;
     text-align: center;
-    box-shadow: 0px 1px 20px #5E5E5E;
+    box-shadow: 0px 1px 10px #5E5E5E;
 }
 
 .btn_menu {
@@ -6257,6 +6257,7 @@ a.badge:focus {
   font-family:'koushikiL';
   color: #454545;
   font-size: 20px;
+  box-shadow: 0px 1px 10px #5E5E5E;
 }
 
 .forgPW {
@@ -6321,7 +6322,7 @@ a.badge:focus {
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  
+
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-user-select: none;

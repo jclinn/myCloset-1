@@ -6342,3 +6342,8 @@ a.badge:focus {
 .topmarginsmall {
   margin-top: 25px;
 }
+
+.fixedsized {
+  width: 300px;
+  height: 500px;
+}

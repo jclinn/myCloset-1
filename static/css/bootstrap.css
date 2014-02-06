@@ -649,7 +649,7 @@ a:focus {
 }
 
 p {
-  margin: 0 0 10px;
+  margin:0;
 }
 
 .lead {
@@ -6324,4 +6324,9 @@ a.badge:focus {
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
+}
+
+
+.topmargin {
+  margin-top: 100px;
 }

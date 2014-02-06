@@ -6255,6 +6255,11 @@ a.badge:focus {
   font-size: 20px;
 }
 
+.forgPW {
+  font-family:'koushikiL';
+  color: #454545;
+  font-size: 20px;
+}
 .formatcenter {
   text-align: center;
 }

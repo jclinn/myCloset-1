@@ -6239,3 +6239,19 @@ a.badge:focus {
 .formatcenter {
   text-align: center;
 }
+
+ .bottomfixed {
+    position: fixed;
+    z-index: 100; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+}
+
+.paddings {
+  padding-top: 250px;
+}
+
+#bonuspadding {
+  padding-bottom: 20px;
+}

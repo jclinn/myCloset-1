@@ -6344,6 +6344,12 @@ a.badge:focus {
 }
 
 .fixedsized {
-  width: 300px;
-  height: 500px;
+  width: 200px;
+  height: 300px;
+}
+
+.centerimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

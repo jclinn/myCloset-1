@@ -6218,7 +6218,7 @@ a.badge:focus {
 .btn_menu {
   display: inline-block;
   color: #689879;
-  padding: 65px 65px ;
+  padding: 80px 65px ;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
@@ -6238,19 +6238,19 @@ a.badge:focus {
 }
 
 .closet {
-  background: url('../img/closet-icon.png');
+  background: url('../img/closet-icon-title.png');
 
 }
 
 .outfits {
-  background: url('../img/outfits-icon.png');
+  background: url('../img/outfits-icon-title.png');
 }
 
 .camera {
-  background: url('../img/camera-icon.png');
+  background: url('../img/camera-icon-title.png');
 }
 .help {
-  background: url('../img/help-icon.png');
+  background: url('../img/help-icon-title.png');
 }
 
 .btncolor {

@@ -1,4 +1,4 @@
-myCloset
-========
+lab4
+====
 
-CSE 170 Project - Collaborators: Doris Kwok, Judy Lin, Frank Chao
+Lab 4: Programming with Javascript

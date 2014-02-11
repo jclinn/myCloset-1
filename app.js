@@ -25,6 +25,8 @@ var category = require ('./routes/category');
 var settings = require('./routes/settings');
 var help = require('./routes/help');
 
+var forgotpassword = require('./routes/forgotpassword');
+
 var app = express();
 
 // all environments
@@ -63,6 +65,7 @@ app.get('/createoutfit', createoutfit.view);
 app.get('/category', category.view);
 app.get('/settings', settings.view); 
 app.get('/help', help.view);
+app.get('/forgotpassword', forgotpassword.view);
 
 // Example route
 // app.get('/users', user.list);

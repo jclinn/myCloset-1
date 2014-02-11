@@ -36,8 +36,7 @@
       <form action="upload.htm" method="post" enctype="multipart/form-data">
   <input type="file" accept="image/*" capture>
   <input type="submit" value="Upload">
-  <script >
-  </script type="text/javascript">
+  <script type="text/javascript">
         var input = document.querySelector('input[type=file]'); // see Example 4
 
       input.onchange = function () {
@@ -56,6 +55,7 @@
         xhr.open('post', 'server.php', true);
         xhr.send(form);
       }
+      </script>
 </form>
      <div class="bottomfixed">
           <ul class="nav">

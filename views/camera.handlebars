@@ -32,6 +32,39 @@
           <h1 class="logo" >CAMERA</h1>
           <a href="/retakepic"><img src="img/blank-polaroid-shoot.png"></img></a>
         </div>
+      <video autoplay width="480" height="360"></video>
+      <input type="button" id="stopb" value="stop"/>
+      <script type="text/javascript">
+         window.URL=window.URL || window.webkitURL;
+         navigator.getUserMedia =
+         navigator.getUserMedia || navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia || navigator.msGetUserMedia;
+        var video = document.querySelector('video');
+        var cameraStream ='';
+        if(navigator.getUserMedia) {
+          navigator.getUserMedia(
+            {audio:false, video: true},
+            function(stream) {
+              cameraStream=stream;
+              video.src=window.URL.createObjectURL(stream);
+            },
+            function() {
+              document.writeIn("problem accesing hardware");
+             }
+          );
+        }
+        else {
+          document.writeIn("video capture is not supported");
+        }
+        document.querySelector('#stopb').addEventListener(
+            'click',
+            function(e) {
+              video.src='';
+              cameraStream.stop();
+            }
+        );
+
+      </script>
      <div class="bottomfixed">
           <ul class="nav">
             <li><a href="category.html" >BACK</a></li>

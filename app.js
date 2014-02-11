@@ -26,6 +26,7 @@ var settings = require('./routes/settings');
 var help = require('./routes/help');
 
 var forgotpassword = require('./routes/forgotpassword');
+var camera = require('./routes/camera');
 
 var app = express();
 
@@ -66,6 +67,7 @@ app.get('/category', category.view);
 app.get('/settings', settings.view); 
 app.get('/help', help.view);
 app.get('/forgotpassword', forgotpassword.view);
+app.get('/camera', camera.view);
 
 // Example route
 // app.get('/users', user.list);

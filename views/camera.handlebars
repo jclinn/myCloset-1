@@ -32,10 +32,30 @@
           <h1 class="logo" >CAMERA</h1>
           <a href="/retakepic"><img src="img/blank-polaroid-shoot.png"></img></a>
         </div>
-      <video autoplay width="480" height="360"></video>
+    <!--  <video autoplay width="480" height="360"></video> -->
       <form action="upload.htm" method="post" enctype="multipart/form-data">
   <input type="file" accept="image/*" capture>
   <input type="submit" value="Upload">
+  <script >
+  </script type="text/javascript">
+        var input = document.querySelector('input[type=file]'); // see Example 4
+
+      input.onchange = function () {
+        var file = input.files[0];
+
+        upload(file);
+        //drawOnCanvas(file);   // see Example 6
+        //displayAsImage(file); // see Example 7
+      };
+
+      function upload(file) {
+        var form = new FormData(),
+            xhr = new XMLHttpRequest();
+
+        form.append('image', file);
+        xhr.open('post', 'server.php', true);
+        xhr.send(form);
+      }
 </form>
      <div class="bottomfixed">
           <ul class="nav">

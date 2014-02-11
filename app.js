@@ -30,6 +30,7 @@ var passwordsent = require('./routes/passwordsent');
 var pants = require('./routes/pants');
 var shoes = require('./routes/shoes');
 var extra = require('./routes/extra');
+var camera = require('./routes/camera');
 
 var app = express();
 
@@ -75,6 +76,7 @@ app.get('/index', index.view);
 app.get('/pants', pants.view);
 app.get('/shoes', shoes.view);
 app.get('/extra', extra.view);
+app.get('/camera', camera.view);
 
 // Example route
 // app.get('/users', user.list);

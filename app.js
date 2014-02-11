@@ -26,7 +26,10 @@ var settings = require('./routes/settings');
 var help = require('./routes/help');
 
 var forgotpassword = require('./routes/forgotpassword');
-var camera = require('./routes/camera');
+var passwordsent = require('./routes/passwordsent');
+var pants = require('./routes/pants');
+var shoes = require('./routes/shoes');
+var extra = require('./routes/extra');
 
 var app = express();
 
@@ -67,7 +70,11 @@ app.get('/category', category.view);
 app.get('/settings', settings.view); 
 app.get('/help', help.view);
 app.get('/forgotpassword', forgotpassword.view);
-app.get('/camera', camera.view);
+app.get('/passwordsent', passwordsent.view);
+app.get('/index', index.view);
+app.get('/pants', pants.view);
+app.get('/shoes', shoes.view);
+app.get('/extra', extra.view);
 
 // Example route
 // app.get('/users', user.list);

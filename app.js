@@ -31,6 +31,7 @@ var pants = require('./routes/pants');
 var shoes = require('./routes/shoes');
 var extra = require('./routes/extra');
 var camera = require('./routes/camera');
+var retakepic = require('./routes/retakepic');
 
 var app = express();
 
@@ -59,7 +60,7 @@ app.get('/', index.view);
 app.get('/login', login.view);
 app.get('/project/:name', project.viewProject);
 app.get('/signup', signup.view);
-app.get('/home', home.view);
+app.get('/home', home.signup);
 app.get('/mycloset', mycloset.view);
 app.get('/viewcloset', viewcloset.view);
 app.get('/tops', tops.view);
@@ -77,6 +78,7 @@ app.get('/pants', pants.view);
 app.get('/shoes', shoes.view);
 app.get('/extra', extra.view);
 app.get('/camera', camera.view);
+app.get('/retakepic', retakepic.view);
 
 // Example route
 // app.get('/users', user.list);

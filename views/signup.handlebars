@@ -32,16 +32,16 @@
           <h1 class="logo" >SIGN UP</h1>
         </div>
         <div class="container">
-            <form action="/home" class="navbar-form formatcenter">
-              <input class="span3" type="text" placeholder="First Name">
+            <form id="signupForm" role="form" method="get" action="/home" class="navbar-form formatcenter">
+              <input class="span3" id="firstname" type="text" placeholder="First Name" name="firstname">
 	      <br>
-              <input class="span3" type="text" placeholder="Last Name">
+              <input class="span3" id="lastname" type="text" placeholder="Last Name" name="lastname">
 	      <br>
-              <input class="span3" type="text" placeholder="Email">
+              <input class="span3" type="text" placeholder="Email" id="email" name="email">
               <br>
-	      <input class="span3" type="password" placeholder="Password">
+	      <input class="span3" type="password" placeholder="Password" id="password" name="password">
               <br>
-              <button type="submit" class="btn btncolor">REGISTER</button>
+              <button type="submit" class="btn btncolor" id="signupbt">REGISTER</button>
             </form>
          </div> <!--/container -->
       <div class="bottomfixed">

@@ -28,38 +28,15 @@
   </head>
 
   <body>
-        <div class="container">
+        <div class="container formatcenter">
           <h1 class="logo" >CAMERA</h1>
-          <a href="/retakepic"><img></img></a>
+          <img class="fixedsized centerimg" src="img/blank-polaroid-frame.png"></img>
+          <a href="/camera" class="btn btncolor">RETAKE</a>
+          <a href="/item" class="btn btncolor">SAVE</a>
         </div>
-    <!--  <video autoplay width="480" height="360"></video> -->
-      <form action="/retakepic" method="post" enctype="multipart/form-data">
-  <input type="file" accept="image/*" capture>
-  <input type="submit" value="Upload">
-  <script type="text/javascript">
-        var input = document.querySelector('input[type=file]'); // see Example 4
-
-      input.onchange = function () {
-        var file = input.files[0];
-
-        upload(file);
-        //drawOnCanvas(file);   // see Example 6
-        //displayAsImage(file); // see Example 7
-      };
-
-      function upload(file) {
-        var form = new FormData(),
-            xhr = new XMLHttpRequest();
-
-        form.append('image', file);
-        xhr.open('post', '/retakepic', true);
-        xhr.send(form);
-      }
-      </script>
-</form>
      <div class="bottomfixed">
           <ul class="nav">
-            <li><a href="category.html" >BACK</a></li>
+            <li><a href="/category" >BACK</a></li>
             <li><a href="/home" >HOME</a></li>
             <li><a href="/index" >LOGOUT</a></li>
             <li><a href="/settings" >SETTINGS</a></li>

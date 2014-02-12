@@ -6271,7 +6271,7 @@ a.badge:focus {
 }
 
  .bottomfixed {
-    position: fixed;
+    position: absolute;
     z-index: 100; 
     bottom: 0; 
     left: 0;

@@ -2008,6 +2008,7 @@ table {
 
 td {
   padding-left: 10px;
+  margin:0;
 }
 table, td {
 
@@ -6456,7 +6457,8 @@ background: url('../img/wood.jpg');
    float:left;
    margin:0px 1%;
 }
-img{
+
+.col img{
   width:100%;
   height:auto;
   margin-top:6%;
@@ -6472,3 +6474,4 @@ img{
 .menu {
   float: right;
 }
+

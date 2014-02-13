@@ -16,6 +16,8 @@
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
     <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
@@ -31,15 +33,36 @@
   </head>
 
   <body>
-        <div class="container">
-          <h1 class="logo" >CAMERA</h1>
-        </div>
+    <table class="logo formatcenter" style="width:100%">
+        <tr>
+           <td><a href="/index" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+
+           <td><h1>CAMERA</h1></td>
+          <td class="menuCol">
+            <div class="btn-group menu">
+            <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
+            <img id="menu" src="img/glyphicons_114_list.png">
+            </button>
+              <ul class="dropdown-menu pull-right setbackground" role="menu" aria-labelledby="dropdownMenu">
+                <li><a tabindex="-1" href="/home"><img id="setting" src="img/glyphicons_020_home.png" class="rightMargin">HOME</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="/setting"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTING</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+               </ul>
+        </div>  
+      </td>
+        <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
+        </tr>
+    </table>
+<div class="container">
     <!--  <video autoplay width="480" height="360"></video> -->
-  <form action="http://mycloset.herokuapp.com/retakepic">
+  <form class="formatcenter" action="http://mycloset.herokuapp.com/retakepic">
   <input style="padding-left:5%; padding-top:5%;" type='file' onchange="readURL(this);" />
     <img id="blah" alt="No image." />
   <input type="submit" value="Upload">
   </form>
+</div>
   <script type="text/javascript">
 	function readURL(input) {
             if (input.files && input.files[0]) {
@@ -56,7 +79,7 @@
             }
         }
   </script>
-  
+
 <!--
 <form action="upload.htm" method="post" enctype="multipart/form-data">
   <input type="file" accept="image/*" capture>
@@ -86,13 +109,10 @@
 </form>
 
 -->
-     <div class="bottomfixed">
-          <ul class="nav">
-            <li><a href="category.html" >BACK</a></li>
-            <li><a href="/home" >HOME</a></li>
-            <li><a href="/index" >LOGOUT</a></li>
-            <li><a href="/settings" >SETTINGS</a></li>
-          </ul>
+    <br>
+    <br>
+    <br>
+     <div class="formatcenter">
           <p>&copy; Teleportation</p>
       </div>
 

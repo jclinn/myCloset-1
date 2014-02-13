@@ -56,13 +56,17 @@
         </tr>
     </table>
 <div class="container">
-    <!--  <video autoplay width="480" height="360"></video> -->
-  <form class="formatcenter" action="http://mycloset.herokuapp.com/retakepic">
-  <input style="padding-left:5%; padding-top:5%;" type='file' onchange="readURL(this);" />
-    <img id="blah" alt="No image." />
+  <form action="http://mycloset.herokuapp.com/retakepic">
+
+  <div style="text-align:center">
+  <input style="padding-top:5%;" type='file' onchange="readURL(this);" />
+  <br>
+  <br>
+  <img id="blah" alt="No image."/>
+  <br>
   <input type="submit" value="Upload">
   </form>
-</div>
+  </div>
   <script type="text/javascript">
 	function readURL(input) {
             if (input.files && input.files[0]) {
@@ -71,44 +75,16 @@
                 reader.onload = function (e) {
                     $('#blah')
                         .attr('src', e.target.result)
-                        .width(300)
-                        .height(400);
+                        .width(200)
+                        .height(250);
                 };
 
                 reader.readAsDataURL(input.files[0]);
             }
         }
   </script>
+ 
 
-<!--
-<form action="upload.htm" method="post" enctype="multipart/form-data">
-  <input type="file" accept="image/*" capture>
-  <input type="submit" value="Upload">
-</form>
-
-  <script type="text/javascript">
-        var input = document.querySelector('input[type=file]'); // see Example 4
-
-      input.onchange = function () {
-        var file = input.files[0];
-
-        upload(file);
-        //drawOnCanvas(file);   // see Example 6
-        //displayAsImage(file); // see Example 7
-      };
-
-      function upload(file) {
-        var form = new FormData(),
-            xhr = new XMLHttpRequest();
-
-        form.append('image', file);
-        xhr.open('post', '/retakepic', true);
-        xhr.send(form);
-      }
-      </script>
-</form>
-
--->
     <br>
     <br>
     <br>
@@ -117,23 +93,6 @@
       </div>
 
     </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>

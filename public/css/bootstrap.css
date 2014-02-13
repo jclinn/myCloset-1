@@ -6441,6 +6441,27 @@ background: url('../img/wood.jpg');
   border-color: #FDF1B6;
 }
 
+.item {
+  width: 50%;
+  height: 50%;
+}
+
+#image_box {
+   width:90%;
+   margin:0px auto;
+}
+
+.col {
+   width:30%;
+   float:left;
+   margin:0px 1%;
+}
+img{
+  width:100%;
+  height:auto;
+  margin-top:6%;
+}
+
 .rightMargin {
   margin-right:20px;
 }

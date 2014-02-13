@@ -9,6 +9,8 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
     <style type="text/css">
       body {
         padding-top: 120px;
@@ -29,25 +31,27 @@
   </head>
 
   <body>
-    <div class="dropdown">
-  <!-- Link or button to toggle dropdown -->
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-    <li><a tabindex="-1" href="#">Action</a></li>
-    <li><a tabindex="-1" href="#">Another action</a></li>
-    <li><a tabindex="-1" href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a tabindex="-1" href="#">Separated link</a></li>
-  </ul>
-</div>
-      <div>
-          <ul class="nav logo">
-            <li class="rightmargin">CHOOSE CATEGORY</li>
-            <li><a href="/index" ><i class="icon-chevron-left"></i></a></li>
-            <li><a href="/home" ><i class="icon-home"></i></a></li>
-            <li><a href="/index" ><i class="icon-share"></i></a></li>
-            <li><a href="/settings" ><i class="icon-cog"></i></a></li>
-          </ul>
-      </div>
+
+<table class="logo formatcenter" style="width:100%">
+        <tr>
+           <td><a href="/index" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+
+           <td><h1>CATEGORY</h1></td>
+          <td class="menuCol">
+            <div class="btn-group menu">
+            <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
+            <img id="menu" src="img/glyphicons_114_list.png">
+            </button>
+              <ul class="dropdown-menu pull-right setbackground" role="menu" aria-labelledby="dropdownMenu">
+                <li><a tabindex="-1" href="/home"><img id="setting" src="img/glyphicons_020_home.png" class="rightMargin">HOME</a></li>
+                <li><a tabindex="-1" href="/setting"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTING</a></li>
+                <li><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+               </ul>
+        </div>  
+      </td>
+        <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
+        </tr>
+    </table>
       <div class="container">
         <!--  <h1 class="logo" >CHOOSE CATEGORY</h1> -->
       </div>

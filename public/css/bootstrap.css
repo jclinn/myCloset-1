@@ -2923,7 +2923,7 @@ table th[class*="span"],
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 120px;
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
@@ -6347,6 +6347,9 @@ a.badge:focus {
     background-size: 100%;
 }
 
+.setbackground {
+background: url('../img/wood.jpg');
+}
 .btn_nav {
   display: inline-block;
   color: #689879;
@@ -6439,7 +6442,7 @@ a.badge:focus {
 }
 
 .rightMargin {
-  margin-right:7px;
+  margin-right:20px;
 }
 
 .menuCol {

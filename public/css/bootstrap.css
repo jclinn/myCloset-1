@@ -2004,9 +2004,11 @@ table {
   border: 1px solid black;
     border-radius: 5px;
     -moz-border-radius: 5px;
-    padding: 5px;
 }
 
+td {
+  padding-left: 10px;
+}
 table, td {
 
 }
@@ -6367,7 +6369,7 @@ a.badge:focus {
   margin-right: 10px;
   display: inline-block;
   background-color: #B34714;
-  padding: 6px 12px;
+  padding: 0;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;

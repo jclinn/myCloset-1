@@ -27,12 +27,18 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
+     <script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
   </head>
 
   <body>
-    <table class="logo formatcenter" style="width:100%">
+    <table class="logo formatcenter">
         <tr>
-           <td><a href="/home" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+          <td style="padding-right:5%;"><button onclick="goBack()" class="pull-left btn_dropdown"><img id="back" src="img/glyphicons_224_chevron-left.png"></button></td>
 
            <td><h1>SETTINGS</h1></td>
           <td class="menuCol">

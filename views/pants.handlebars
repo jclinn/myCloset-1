@@ -9,6 +9,8 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
     <style type="text/css">
       body {
         padding-top: 120px;
@@ -29,12 +31,38 @@
     <!-- Fav and touch icons -->
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script>
+    function goBack()
+      {
+      window.history.back()
+      }
+    </script>
   </head>
 
   <body>
-        <div class="container">
-          <h1 class="logo" >PANTS</h1>
-        </div>
+    <table class="logo formatcenter">
+        <tr>
+          <td style="padding-right:5%;"><button onclick="goBack()" class="pull-left btn_dropdown"><img id="back" src="img/glyphicons_224_chevron-left.png"></button></td>
+           
+    <td style="padding-left:auto; padding-right:auto;"><h1>PANTS</h1></td>
+
+          <td class="menuCol">
+
+            <div class="btn-group menu">
+            <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
+            <img id="menu" src="img/glyphicons_114_list.png">
+            </button>
+              <ul class="dropdown-menu pull-right setbackground" role="menu" aria-labelledby="dropdownMenu">
+                <li class="rightMargin"><a tabindex="-1" href="/home"><img id="setting" src="img/glyphicons_020_home.png" class="rightMargin">HOME</a></li>
+                <li class="divider"></li>
+                <li class="rightMargin"><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTINGS</a></li>
+                <li class="divider"></li>
+                <li class="rightMargin"><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+               </ul>
+            </div>  
+          </td>
+        </tr>
+    </table>
 
       {{#each pants_list.getImg}}
       <div id="image_box" class="getImg">
@@ -53,12 +81,6 @@
     {{/each}}
 
      <div class="bottomfixed">
-          <ul class="nav">
-            <li><a href="/categorycam" >BACK</a></li>
-            <li><a href="/home" >HOME</a></li>
-            <li><a href="/index" >LOGOUT</a></li>
-            <li><a href="/settings" >SETTINGS</a></li>
-          </ul>
           <p>&copy; Teleportation</p>
       </div>
 

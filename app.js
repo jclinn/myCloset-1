@@ -63,7 +63,7 @@ app.get('/signup', signup.view);
 app.get('/home', home.signup);
 app.get('/mycloset', mycloset.view);
 app.get('/viewcloset', viewcloset.view);
-app.get('/tops', tops.view);
+app.get('/tops', tops.getTops);
 app.get('/outfits', outfits.view);
 
 app.get('/viewoutfits', viewoutfits.view);

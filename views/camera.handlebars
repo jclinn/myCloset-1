@@ -33,12 +33,14 @@
   </head>
 
   <body>
-    <table class="logo formatcenter" style="width:100%">
+    <table class="logo formatcenter">
         <tr>
-           <td><a href="/index" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+          <td style="padding-right:5%;"><a href="/index" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+           
+	  <td style="padding-left:auto; padding-right:auto;"><h1>CAMERA</h1></td>
 
-           <td><h1>CAMERA</h1></td>
           <td class="menuCol">
+
             <div class="btn-group menu">
             <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
             <img id="menu" src="img/glyphicons_114_list.png">
@@ -46,20 +48,21 @@
               <ul class="dropdown-menu pull-right setbackground" role="menu" aria-labelledby="dropdownMenu">
                 <li><a tabindex="-1" href="/home"><img id="setting" src="img/glyphicons_020_home.png" class="rightMargin">HOME</a></li>
                 <li class="divider"></li>
-                <li><a tabindex="-1" href="/setting"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTING</a></li>
+                <li><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTING</a></li>
                 <li class="divider"></li>
                 <li><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
                </ul>
-        </div>  
-      </td>
+            </div>  
+          </td>
         <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
         </tr>
     </table>
-<div class="container">
-  <form action="http://mycloset.herokuapp.com/retakepic">
 
-  <div style="text-align:center">
-  <input style="padding-top:5%;" type='file' onchange="readURL(this);" />
+
+<div class="container">
+  <div style="text-align:center;">
+  <form action="/retakepic">
+  <input style="padding-left:38%;" type='file' onchange="readURL(this);" />
   <br>
   <br>
   <img id="blah" alt="No image."/>

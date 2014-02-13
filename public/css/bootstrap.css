@@ -105,6 +105,7 @@ img {
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
+
 }
 
 #map_canvas img,
@@ -1996,15 +1997,23 @@ legend + .control-group {
 }
 
 table {
-  max-width: 100%;
+
   background-color: transparent;
-  border-collapse: collapse;
+  border-collapse: separate;
   border-spacing: 0;
+  border: 1px solid black;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 5px;
 }
 
+table, td {
+
+}
 .table {
   width: 100%;
   margin-bottom: 20px;
+
 }
 
 .table th,
@@ -2014,6 +2023,8 @@ table {
   text-align: left;
   vertical-align: top;
   border-top: 1px solid #dddddd;
+
+
 }
 
 .table th {
@@ -6314,6 +6325,69 @@ a.badge:focus {
   background: url('../img/extra-bar.png');
 }
 
+.backbtn {
+  background: url('../img/glyphicons_224_chevron-left.png') no-repeat;
+   background-size: 100%;
+}
+.logoutbtn {
+  background: url('../img/glyphicons_388_exit.png' no-repeat);
+    padding: 11.5px 12px ;
+    background-size: 100%;
+}
+.homebtn {
+  background: url('../img/glyphicons_020_home.png');
+    padding: 12px 12px ;
+    background-size: 100%;
+}
+.settingbtn {
+  background: url('../img/glyphicons_136_cogwheel.png');
+    padding: 11.5px 12px ;
+    background-size: 100%;
+}
+
+.btn_nav {
+  display: inline-block;
+  color: #689879;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+
+.btn_dropdown{
+  margin-right: 10px;
+  display: inline-block;
+  background-color: #B34714;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+   box-shadow: 0px 1px 10px #C4501A;
+          
+}
+
 .btn_category {
   display: inline-block;
   color: #689879;
@@ -6360,4 +6434,15 @@ a.badge:focus {
   border-right-style:solid;
   border-right: solid #FDF1B6;
   border-color: #FDF1B6;
+}
+
+.rightMargin {
+  margin-right:7px;
+}
+
+.menuCol {
+  width:40px;
+}
+.menu {
+  float: right;
 }

@@ -9,6 +9,8 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
     <style type="text/css">
       body {
         padding-top: 120px;
@@ -27,15 +29,27 @@
     <!-- Fav and touch icons -->
   </head>
 
-  <body> 
-    <div>
-          <ul class="nav logo">
-            <li class="rightmargin">HOME</li>
-             <li><a href="/index" ><i class="icon-chevron-left"></i></a></li>
-            <li><a href="/index" ><i class="icon-share"></i></a></li>
-            <li><a href="/settings" ><i class="icon-cog"></i></a></li>
-          </ul>
-      </div>
+    <table class="logo formatcenter" style="width:100%">
+        <tr>
+           <td><a href="/index" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+
+           <td><h1>HOME</h1></td>
+          <td class="menuCol">
+            <div class="btn-group menu">
+        <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
+        <img id="menu" src="img/glyphicons_114_list.png">
+        </button>
+          <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
+            <li><a tabindex="-1" href="/setting"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">Setting</a></li>
+            <li><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">Log out</a></li>
+           </ul>
+        </div>  
+      </td>
+        <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
+        </tr>
+    </table>
+
+    <br>
         <div class="container">
           <!--<h1 class="logo" >MAIN MENU</h1-->
           <p class ="formatcenter">WELCOME: {{firstname}}</p>

@@ -2,13 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>View Closet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
     <style type="text/css">
       body {
         padding-top: 120px;
@@ -28,19 +30,32 @@
   </head>
 
   <body>
-        <div class="container">
-          <h1 class="logo" >VIEW CLOSET</h1>
-        </div>
+<table class="logo formatcenter" style="width:100%">
+        <tr>
+           <td><a href="/mycloset" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+
+           <td><h1>VIEW CLOSET</h1></td>
+          <td class="menuCol">
+            <div class="btn-group menu">
+            <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
+            <img id="menu" src="img/glyphicons_114_list.png">
+            </button>
+              <ul class="dropdown-menu pull-right setbackground" role="menu" aria-labelledby="dropdownMenu">
+                <li><a tabindex="-1" href="/home"><img id="setting" src="img/glyphicons_020_home.png" class="rightMargin">HOME</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTING</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+               </ul>
+        </div>  
+      </td>
+        <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
+        </tr>
+    </table>
         <div class="container">
          </div> <!--/container -->
       <div class="container">
       <div class="bottomfixed">
-          <ul class="nav">
-            <li><a href="/mycloset" >BACK</a></li>
-            <li><a href="/home" >HOME</a></li>
-            <li><a href="/index" >LOGOUT</a></li>
-            <li><a href="/settings" >SETTINGS</a></li>
-          </ul>
           <p>&copy; Teleportation</p>
       </div>
 

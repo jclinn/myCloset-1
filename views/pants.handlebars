@@ -16,6 +16,8 @@
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Dosis:700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -27,16 +29,29 @@
   </head>
 
   <body>
-        <div class="container">
-          <h1 class="logo" >PANTS</h1>
-        </div>
+<table class="logo formatcenter" style="width:100%">
+        <tr>
+           <td><a href="/mycloset" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+
+           <td><h1>PANTS</h1></td>
+          <td class="menuCol">
+            <div class="btn-group menu">
+            <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
+            <img id="menu" src="img/glyphicons_114_list.png">
+            </button>
+              <ul class="dropdown-menu pull-right setbackground" role="menu" aria-labelledby="dropdownMenu">
+                <li><a tabindex="-1" href="/home"><img id="setting" src="img/glyphicons_020_home.png" class="rightMargin">HOME</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTINGS</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+               </ul>
+        </div>  
+      </td>
+        <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
+        </tr>
+    </table>
      <div class="bottomfixed">
-          <ul class="nav">
-            <li><a href="/categorycam" >BACK</a></li>
-            <li><a href="/home" >HOME</a></li>
-            <li><a href="/index" >LOGOUT</a></li>
-            <li><a href="/settings" >SETTINGS</a></li>
-          </ul>
           <p>&copy; Teleportation</p>
       </div>
     <!-- Le javascript

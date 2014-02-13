@@ -9,6 +9,8 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
     <style type="text/css">
       body {
         padding-top: 120px;
@@ -28,20 +30,37 @@
   </head>
 
   <body>
-        <div class="container">
-          <h1 class="logo">HELP</h1>
-        </div>
-        <div class="container">
+    <table class="logo formatcenter" style="width:100%">
+        <tr>
+           <td><a href="/home" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+
+           <td><h1>HELP</h1></td>
+          <td class="menuCol">
+            <div class="btn-group menu">
+            <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
+            <img id="menu" src="img/glyphicons_114_list.png">
+            </button>
+              <ul class="dropdown-menu pull-right setbackground" role="menu" aria-labelledby="dropdownMenu">
+                <li><a tabindex="-1" href="/home"><img id="setting" src="img/glyphicons_020_home.png" class="rightMargin">HOME</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTINGS</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+               </ul>
+        </div>  
+      </td>
+        </tr>
+    </table>
+    <br>
+
+        <div class="container formatcenter">
              <p>My Closet is meant for users who have a hard time choosing what to buy and what to wear. This application allows the user to save the contents of their closet for reference when shopping. It features an outfit generator based on contents in your closet and new items that the user can add.</p>
+             <br>
              <p>Please email: mycloset@gmail.com for any feedback or questions. Thanks!</p>
          </div> <!--/container -->
-
-     <div class="bottomfixed">
-          <ul class="nav">
-            <li><a href="/home" >BACK</a></li>
-            <li><a href="/index" >LOGOUT</a></li>
-            <li><a href="/settings" >SETTINGS</a></li>
-          </ul>
+     <br>
+     <br>
+     <div class="formatcenter">
           <p>&copy; Teleportation</p>
       </div>
 

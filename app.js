@@ -32,6 +32,7 @@ var shoes = require('./routes/shoes');
 var extra = require('./routes/extra');
 var camera = require('./routes/camera');
 var retakepic = require('./routes/retakepic');
+//var item = require('./routes/item');
 
 var app = express();
 
@@ -74,11 +75,12 @@ app.get('/help', help.view);
 app.get('/forgotpassword', forgotpassword.view);
 app.get('/passwordsent', passwordsent.view);
 app.get('/index', index.view);
-app.get('/pants', pants.view);
+app.get('/pants', pants.getPants);
 app.get('/shoes', shoes.view);
 app.get('/extra', extra.view);
 app.get('/camera', camera.view);
 app.get('/retakepic', retakepic.view);
+//app.get('/item', item.view);
 
 // Example route
 // app.get('/users', user.list);

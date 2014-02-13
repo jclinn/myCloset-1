@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Camera Shirt</title>
+    <title>Camera</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -33,12 +33,14 @@
   </head>
 
   <body>
-    <table class="logo formatcenter" style="width:100%">
+    <table class="logo formatcenter">
         <tr>
-           <td><a href="/index" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+          <td style="padding-right:5%;"><a href="/index" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+           
+    <td style="padding-left:auto; padding-right:auto;"><h1>CAMERA</h1></td>
 
-           <td><h1>CAMERA</h1></td>
           <td class="menuCol">
+
             <div class="btn-group menu">
             <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
             <img id="menu" src="img/glyphicons_114_list.png">
@@ -46,69 +48,46 @@
               <ul class="dropdown-menu pull-right setbackground" role="menu" aria-labelledby="dropdownMenu">
                 <li><a tabindex="-1" href="/home"><img id="setting" src="img/glyphicons_020_home.png" class="rightMargin">HOME</a></li>
                 <li class="divider"></li>
-                <li><a tabindex="-1" href="/setting"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTING</a></li>
+                <li><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTING</a></li>
                 <li class="divider"></li>
                 <li><a tabindex="-1" href="/index"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
                </ul>
-        </div>  
-      </td>
+            </div>  
+          </td>
         <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
         </tr>
     </table>
+
+
 <div class="container">
-    <!--  <video autoplay width="480" height="360"></video> -->
-  <form class="formatcenter" action="/retakepic">
-  <input style="padding-left:5%; padding-top:5%;" type='file' onchange="readURL(this);" />
-    <img id="blah" alt="No image." />
+  <div style="text-align:center;">
+  <form action="/retakepic">
+  <input style="padding-left:38%;" type='file' onchange="readURL(this);" />
+  <br>
+  <br>
+  <img id="blah" alt="No image."/>
+  <br>
   <input type="submit" value="Upload">
   </form>
-</div>
+  </div>
   <script type="text/javascript">
-	function readURL(input) {
+  function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
                     $('#blah')
                         .attr('src', e.target.result)
-                        .width(300)
-                        .height(400);
+                        .width(200)
+                        .height(250);
                 };
 
                 reader.readAsDataURL(input.files[0]);
             }
         }
   </script>
+ 
 
-<!--
-<form action="upload.htm" method="post" enctype="multipart/form-data">
-  <input type="file" accept="image/*" capture>
-  <input type="submit" value="Upload">
-</form>
-
-  <script type="text/javascript">
-        var input = document.querySelector('input[type=file]'); // see Example 4
-
-      input.onchange = function () {
-        var file = input.files[0];
-
-        upload(file);
-        //drawOnCanvas(file);   // see Example 6
-        //displayAsImage(file); // see Example 7
-      };
-
-      function upload(file) {
-        var form = new FormData(),
-            xhr = new XMLHttpRequest();
-
-        form.append('image', file);
-        xhr.open('post', '/retakepic', true);
-        xhr.send(form);
-      }
-      </script>
-</form>
-
--->
     <br>
     <br>
     <br>
@@ -117,23 +96,6 @@
       </div>
 
     </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>

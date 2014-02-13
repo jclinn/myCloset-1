@@ -52,13 +52,15 @@
         <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
         </tr>
     </table>
+<div id="image_box" class="getImg">    
+<ul class="images">
 {{#each viewclo_list.getImg}}
-    <div id="box" class="getImg">
-          <ul class="images">
-              <li><img src="{{imageURL}}"/></li>    
-              </ul>
+      <div class="col2">
+        <li><img src="{{imageURL}}"/></li>
         </div>
 {{/each}}
+</ul>
+</div>
       <div class="container">
       <div class="bottomfixed">
           <p>&copy; Teleportation</p>

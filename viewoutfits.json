@@ -3,32 +3,32 @@
 		{
 			"name": "Doug Engelbart",
 			"description": "Has awesome pet mice",
-			"imageURL": "../img/top1.jpg"			
+			"imageURL": "../img/Outfit1.jpg"			
 		},
 		{
 			"name": "Ivan Sutherland",
 			"description": "Great at sketching",
-			"imageURL": "../img/top2.jpg"			
+			"imageURL": "../img/Outfit2.jpg"			
 		},
 		{
 			"name": "Lucy Suchman",
 			"description": "Loves Trukese navigators",
-			"imageURL": "../img/top3.jpg"			
+			"imageURL": "../img/Outfit3.jpg"			
 		},
 		{
 			"name": "Vannevar Bush",
 			"description": "Has stellar associative memory",
-			"imageURL": "../img/top4.jpg"			
+			"imageURL": "../img/Outfit4.jpg"			
 		},
 		{
 			"name": "Grace Hopper",
 			"description": "Only friend with a Navy ship named after them",
-			"imageURL": "../img/top5.jpg"
+			"imageURL": "../img/Outfit5.jpg"
 		},
 		{
 			"name": "Allen Newell",
 			"description": "Really into psychology",
-			"imageURL": "../img/top6.jpg"
+			"imageURL": "../img/Outfit6.jpg"
 		}
 	]
 }

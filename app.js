@@ -67,7 +67,7 @@ app.get('/viewcloset', viewcloset.getCloset);
 app.get('/tops', tops.getTops);
 app.get('/outfits', outfits.view);
 
-app.get('/viewoutfits', viewoutfits.view);
+app.get('/viewoutfits', viewoutfits.getviewoutfits);
 app.get('/createoutfit', createoutfit.view);
 app.get('/category', category.view);
 app.get('/settings', settings.view); 

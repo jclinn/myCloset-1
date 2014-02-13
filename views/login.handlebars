@@ -18,6 +18,45 @@
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+	      <script type="text/javascript">
+	          function validate(){
+		      var un = document.loginForm.username.value;
+		      var pw = document.loginForm.pword.value;
+		      var valid = false;
+
+		      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+		      if(re.test(un)){
+		          valid = true;
+		      }
+/*
+		      var unArray = ["Judy", "Doris", "Frank"];
+		      var pwArray = ["Lin", "Kwok", "Chao"];
+
+		      for(var i = 0; i < unArray.length; i++){
+		          if((un == unArray[i]) && (pw ==pwArray[i])){
+			      valid = true;
+			      break;
+		          }
+		      }
+*/
+	              if(valid){
+		          alert("Login was successful");
+		          window.location.href = "/home";
+		          return false;
+		      }
+		      else{
+		          alert("Incorrect username and/or password.");
+		      }
+
+		      document.loginForm.username.value = "";
+		      document.loginForm.pword.value="";
+	     	      setTimeout("document.loginForm.username.focus()", 25);
+		      setTimeout("document.loginForm.username.select()", 25);
+
+		  }
+	      </script>
+
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -30,12 +69,12 @@
   <body>
         <div class="container">
           <h1 class="logo" >MY CLOSET</h1>
-            <form id="loginForm" role="form" method="get" action="/home" class="navbar-form formatcenter">
-              <input class="span2" type="text" placeholder="Email" id="email">
+            <form name="loginForm" id="loginForm" role="form" method="get" class="navbar-form formatcenter">
+              <input name="username" class="span2" type="text" placeholder="Email" id="email">
 	      <br>
-              <input class="span2" type="password" placeholder="Password" id="password">
+              <input name="pword" class="span2" type="password" placeholder="Password" id="password">
 	      <br>
-	      <button type="submit" class="btn btncolor stretch ">LOGIN</button>
+	      <button type="submit" class="btn btncolor stretch" onclick="return validate()">LOGIN</button>
 	      <br>
               </form>
 	      	
@@ -45,6 +84,7 @@
 	      <form action="/signup" class="navbar-form formatcenter">
 	      <button type="submit" value="Sign up here!" class="stretch btn btncolor">SIGN UP</button>
 	      </form>
+
       <div class="container">
 
       <div class="bottomfixed">
@@ -53,22 +93,6 @@
 
     </div> <!-- /container -->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>

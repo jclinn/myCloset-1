@@ -6454,6 +6454,11 @@ background: url('../img/wood.jpg');
    margin:0px auto;
 }
 
+#box {
+   width:40%;
+   height:20%;
+   margin:0px auto;
+}
 .col {
    width:30%;
    float:left;
@@ -6479,4 +6484,19 @@ background: url('../img/wood.jpg');
 
 .stretch {
   width: 100%;
+}
+
+ul.images {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  width: 1000px;
+  overflow-x: auto;
+  background-color: #ddd;
+}
+
+ul.images li {
+  display: inline;
+  width: 150px;
+  height: 150px;
 }

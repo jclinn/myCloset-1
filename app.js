@@ -77,7 +77,7 @@ app.get('/passwordsent', passwordsent.view);
 app.get('/index', index.view);
 app.get('/pants', pants.getPants);
 app.get('/shoes', shoes.getShoes);
-app.get('/extra', extra.view);
+app.get('/extra', extra.getExtra);
 app.get('/camera', camera.view);
 app.get('/retakepic', retakepic.view);
 app.get('/item', item.view);

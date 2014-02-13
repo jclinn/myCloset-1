@@ -27,12 +27,18 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <!-- Fav and touch icons -->
+    <script>
+    function goBack()
+      {
+      window.history.back()
+      }
+    </script>
   </head>
 
   <body>
-    <table class="logo formatcenter" style="width:100%">
+    <table class="logo formatcenter">
         <tr>
-           <td style="padding-right:5%;"><a href="/mycloset" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+          <td style="padding-right:5%;"><button onclick="goBack()" class="pull-left btn_dropdown"><img id="back" src="img/glyphicons_224_chevron-left.png"></button></td>
            <td style="padding-left:auto; padding-right:auto;"><h1>TOPS</h1></td>
           <td class="menuCol">
             <div class="btn-group menu">

@@ -6477,3 +6477,6 @@ background: url('../img/wood.jpg');
   float: right;
 }
 
+.stretch {
+  width: 100%;
+}

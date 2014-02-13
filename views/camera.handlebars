@@ -24,18 +24,18 @@
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
+     <script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
   </head>
 
   <body>
     <table class="logo formatcenter">
         <tr>
-          <td style="padding-right:5%;"><a href="/category" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+          <td style="padding-right:5%;"><button onclick="goBack()" class="pull-left btn_dropdown"><img id="back" src="img/glyphicons_224_chevron-left.png"></button></td>
            
     <td style="padding-left:auto; padding-right:auto;"><h1>CAMERA</h1></td>
 

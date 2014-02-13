@@ -18,6 +18,9 @@
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -30,12 +33,36 @@
   <body>
         <div class="container">
           <h1 class="logo" >CAMERA</h1>
-          <a href="/retakepic"><img></img></a>
         </div>
     <!--  <video autoplay width="480" height="360"></video> -->
-      <form action="/retakepic" method="post" enctype="multipart/form-data">
+  <form action="http://mycloset.herokuapp.com/retakepic">
+  <input style="padding-left:5%; padding-top:5%;" type='file' onchange="readURL(this);" />
+    <img id="blah" alt="No image." />
+  <input type="submit" value="Upload">
+  </form>
+  <script type="text/javascript">
+	function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(300)
+                        .height(400);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+  </script>
+  
+<!--
+<form action="upload.htm" method="post" enctype="multipart/form-data">
   <input type="file" accept="image/*" capture>
   <input type="submit" value="Upload">
+</form>
+
   <script type="text/javascript">
         var input = document.querySelector('input[type=file]'); // see Example 4
 
@@ -57,6 +84,8 @@
       }
       </script>
 </form>
+
+-->
      <div class="bottomfixed">
           <ul class="nav">
             <li><a href="category.html" >BACK</a></li>

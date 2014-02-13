@@ -6480,3 +6480,23 @@ background: url('../img/wood.jpg');
 .stretch {
   width: 100%;
 }
+
+#wrapper {
+    width: 500px;
+    height: 110px;
+}
+
+#containersimg {
+   background-color: #ffffff;
+   width: 300px;
+   height: 120px;
+   overflow-x: scroll;
+}
+
+.square {
+   background-color: #00b;
+   float: left;
+   height: 90px;
+   width: 90px;
+   margin: 5px;
+}

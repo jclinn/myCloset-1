@@ -65,48 +65,40 @@
 -->
 
     <br>
-    <div id="containersimg" >
+    <div id="containersimg">
         <div id="wrapper" >
-            <div class="square"><img src="../img/top1.jpg"></div>
-            <div class="square"><img src="../img/top2.jpg"></div>
-            <div class="square"><img src="../img/top3.jpg"></div>
-            <div class="square"><img src="../img/top4.jpg"></div>
-            <div class="square"><img src="../img/top5.jpg"></div>
-            <div class="square"><img src="../img/top6.jpg"></div>
-        </div>
+          {{#each makeo_list.getImg}}
+            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose"></a></div>
+            <div id="overlay"></div>
+            {{/each}}
+       </div>
     </div>
 
-        <br>
-    <div id="containersimg" >
+    <div id="containersimg">
         <div id="wrapper" >
-            <div class="square"><img src="../img/bottom1.jpg"></div>
-            <div class="square"><img src="../img/bottom2.jpg"></div>
-            <div class="square"><img src="../img/bottom3.jpg"></div>
-            <div class="square"><img src="../img/bottom4.jpg"></div>
-            <div class="square"><img src="../img/bottom5.jpg"></div>
-        </div>
+          {{#each pants_list.getImg}}
+            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose2"></a></div>
+            <div id="overlay2"></div>
+            {{/each}}
+       </div>
     </div>
 
-        <br>
-    <div id="containersimg" >
+    <div id="containersimg">
         <div id="wrapper" >
-            <div class="square"><img src="../img/shoe1.jpg"></div>
-            <div class="square"><img src="../img/shoe2.jpg"></div>
-            <div class="square"><img src="../img/shoe3.jpg"></div>
-            <div class="square"><img src="../img/shoe4.jpg"></div>
-            <div class="square"><img src="../img/shoe5.jpg"></div>
-        </div>
+          {{#each shoes_list.getImg}}
+            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose"></a></div>
+            <div id="overlay"></div>
+            {{/each}}
+       </div>
     </div>
 
-        <br>
-    <div id="containersimg" >
+    <div id="containersimg">
         <div id="wrapper" >
-            <div class="square"><img src="../img/extra1.jpg"></div>
-            <div class="square"><img src="../img/extra2.jpg"></div>
-            <div class="square"><img src="../img/extra3.jpg"></div>
-            <div class="square"><img src="../img/extra4.jpg"></div>
-            <div class="square"><img src="../img/extra5.jpg"></div>
-        </div>
+          {{#each extra_list.getImg}}
+            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose"></a></div>
+            <div id="overlay"></div>
+            {{/each}}
+       </div>
     </div>
 
    

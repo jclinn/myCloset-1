@@ -18,36 +18,57 @@
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Dosis:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+  
+    <script>
+         function validate(){
+	     var un = document.signupForm.username.value;
+	     var pw = document.signupForm.pword.value;
+	     var valid = false;
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
+	     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    <!-- Fav and touch icons -->
-  </head>
+	     if(re.test(un)){
+	         valid = true;
+	     }
+	              
+	     if(valid){
+		 alert("Login was successful");
+		 window.location.href = "/home";
+		 return false;
+	     }
+	     else{
+ 	         alert("Invalid e-mail.");
+	     }
+	     document.signupForm.username.value = "";
+	     document.signupForm.pword.value="";
+	     setTimeout("document.signupForm.username.focus()", 25);
+             setTimeout("document.signupForm.username.select()", 25);
+
+	 }
+    </script>
+</head>
 
   <body>
    <table class="logo formatcenter" style="width:100%">
         <tr>
-           <td><a href="/index" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
+           <td><a href="/" class="pull-left"><img id="back" src="img/glyphicons_224_chevron-left.png"></a></td>
            <td><h1>SIGN UP</h1></td>
-      </td>
+      <td></td>
         <!--  <td><a href="/settings" class="btn_nav settingbtn"></a></td> -->
         </tr>
     </table>
         <div class="container">
           <br>
-            <form id="signupForm" role="form" method="get" action="/home" class="navbar-form formatcenter">
+            <form name="signupForm" id="signupForm" role="form" method="get" class="navbar-form formatcenter">
               <input class="span3" id="firstname" type="text" placeholder="First Name" name="firstname">
 	      <br>
               <input class="span3" id="lastname" type="text" placeholder="Last Name" name="lastname">
 	      <br>
-              <input class="span3" type="text" placeholder="Email" id="email" name="email">
+              <input name="username" class="span3" type="text" placeholder="Email" id="email">
               <br>
-	      <input class="span3" type="password" placeholder="Password" id="password" name="password">
+	      <input class="span3" type="password" placeholder="Password" id="password" name="pword">
               <br>
-              <button type="submit" class="btn btncolor" id="signupbt">REGISTER</button>
+              <button onclick="return validate()" type="submit" class="btn btncolor" id="signupbt">REGISTER</button>
             </form>
          </div> <!--/container -->
       <br>
@@ -58,22 +79,6 @@
       </footer>
       </div>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>

@@ -70,7 +70,7 @@
       <div id="image_box" class="getImg">
 
         <div class="col">
-          <a href="/viewpants"><img id="imgVal" src="{{imageURL}}" /></a>
+          <a href="/viewpants"><img id="imgVal" src="{{imageURL}}" onClick="selectPantCloset('{{imageURL}}')"/></a>
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />
@@ -87,13 +87,13 @@
       </div>
 
 
-            <script>
-        $("#imgVal").click(function(e) {
+    <script>
+      function selectPantCloset(url) {   
           //console.log("image clicked");
-          var imgVal = document.getElementById("imgVal").src;
+          var imgVal = url;
         //console.log(imgVal);
-        localStorage.setItem("viewpants", imgVal);
-      });
+        localStorage.setItem("viewpants", url);
+      }
       </script>
 
   </body>

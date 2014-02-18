@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Outfit Created</title>
+    <title>View Pants</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -35,7 +35,7 @@ function goBack()
         <tr>
           <td style="padding-right:5%;"><button onclick="goBack()" class="pull-left btn_dropdown"><img id="back" src="img/glyphicons_224_chevron-left.png"></button></td>
 
-           <td><h1>OUTFIT CREATED</h1></td>
+           <td><h1>VIEW PANTS</h1></td>
           <td class="menuCol">
             <div class="btn-group menu">
             <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
@@ -52,26 +52,27 @@ function goBack()
     </table>
 
      <br>
-     <h1 id="outfitname"></h1>
+     
      <div class="container formatcenter"> 
-      <img id= "outfitimage" src="../img/pants-bar.png"><img>
+      <img id= "pantsVal"><img>
     </div>
-    <script src="/js/jquery-1.11.0.js"></script>
+    
     <br>
     <br>
      <div class="formatcenter">
           <p>&copy; Teleportation</p>
       </div>
 
+      <script src="/js/jquery-1.11.0.js"></script>
       <!-- using localStorage -->
       <script> 
 
-        var outfitname= localStorage.getItem("viewpants");
+        var pantsVal= localStorage.getItem("viewpants");
         //console.log(outfitname);
         //$("#outfitname").text(outfitname);
         //var imgSource = document.getElementById("outfitimage").src;
         //console.log( imgSource);
-        document.getElementById("outfitimage").src = outfitname;
+        document.getElementById("pantsVal").src = pantsVal;
       </script>
   </body>
 </html>

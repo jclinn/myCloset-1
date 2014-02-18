@@ -57,7 +57,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each makeo_list.getImg}}
-            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose"></a></div>
+            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose" onClick="selectImageTop('{{imageURL}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
@@ -66,7 +66,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each pants_list.getImg}}
-            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose2"></a></div>
+            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose2" onClick="selectImagePant('{{imageURL}}')"></a></div>
             <div id="overlay2"></div>
             {{/each}}
        </div>
@@ -75,7 +75,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each shoes_list.getImg}}
-            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose"></a></div>
+            <div class="square"><a href="#" ><img id="shoeVal" src="{{imageURL}}"  class="expose" onClick="selectImageShoe('{{imageURL}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
@@ -84,7 +84,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each extra_list.getImg}}
-            <div class="square"><a href="#" ><img id="imgVal" src="{{imageURL}}"  class="expose" ></a></div>
+            <div class="square"><a href="#" ><img id="imgVal" src="{{imageURL}}"  class="expose" onClick="selectImage('{{imageURL}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
@@ -117,12 +117,41 @@
       </script>
 
       <script>
-        $("#imgVal").click(function(e) {
+      function selectImage(url) {
           console.log("image clicked");
-          var imgVal = document.getElementById("imgVal").src;
+          //var imgVal = document.getElementById("imgVal").src;
+          var imgVal = url;
         console.log(imgVal);
-        localStorage.setItem("outfitname", imgVal);
-      });
+        localStorage.removeItem("extraimage");
+        localStorage.setItem("extraimage", imgVal);
+      }
+      </script>
+      <script>
+        function selectImageShoe(url) {
+          console.log("image clicked");
+          var shoeVal = url
+        console.log(shoeVal);
+        localStorage.removeItem("shoeimage");
+        localStorage.setItem("shoeimage", shoeVal);
+      }
+      </script>
+      <script>
+        function selectImagePant(url) {
+          console.log("image clicked");
+          var pantVal = url
+        console.log(pantVal);
+        localStorage.removeItem("pantimage");
+        localStorage.setItem("pantimage", pantVal);
+      }
+      </script>
+      <script>
+        function selectImageTop(url) {
+          console.log("image clicked");
+          var topVal = url
+        console.log(topVal);
+        localStorage.removeItem("topimage");
+        localStorage.setItem("topimage", topVal);
+      }
       </script>
   </body>
 </html>

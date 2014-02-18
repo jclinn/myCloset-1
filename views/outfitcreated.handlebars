@@ -53,25 +53,38 @@ function goBack()
 
      <br>
      <h1 id="outfitname"></h1>
-     <div class="container formatcenter"> 
-      <img id= "outfitimage" src="../img/pants-bar.png"><img>
+     <div class="imgcontainer formatcenter"> 
+      <img id="topVal"><img>
+      <img id="extraimage"><img>
+      <img id="pantVal"><img>
+      <img id="shoeVal"><img>
+
     </div>
-    <script src="/js/jquery-1.11.0.js"></script>
+    
     <br>
     <br>
      <div class="formatcenter">
           <p>&copy; Teleportation</p>
       </div>
-
+      <script src="/js/jquery-1.11.0.js"></script>
       <!-- using localStorage -->
       <script> 
 
-        var outfitname= localStorage.getItem("outfitname");
+        var extraimage= localStorage.getItem("extraimage");
         //console.log(outfitname);
         //$("#outfitname").text(outfitname);
         //var imgSource = document.getElementById("outfitimage").src;
         //console.log( imgSource);
-        document.getElementById("outfitimage").src = outfitname;
+        document.getElementById("extraimage").src = extraimage;
+
+        var shoeVal = localStorage.getItem("shoeimage");
+        document.getElementById("shoeVal").src = shoeVal;
+
+        var pantVal = localStorage.getItem("pantimage");
+        document.getElementById("pantVal").src = pantVal;
+
+        var topVal = localStorage.getItem("topimage");
+        document.getElementById("topVal").src = topVal;
       </script>
   </body>
 </html>

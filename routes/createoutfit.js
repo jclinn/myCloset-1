@@ -17,3 +17,4 @@ exports.getCloset =function(req, res) {
 
   	);
 };
+

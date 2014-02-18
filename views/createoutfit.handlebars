@@ -84,14 +84,14 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each extra_list.getImg}}
-            <div class="square"><a href="#" ><img src="{{imageURL}}"  class="expose"></a></div>
+            <div class="square"><a href="#" ><img id="imgVal" src="{{imageURL}}"  class="expose" ></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
     </div>
 
     <div class="container formatcenter">
-          <a href="/viewoutfits" class="btn btncolor">CREATE</a>
+          <a href="/outfitcreated" class="btn btncolor">CREATE</a>
     </div>
 
     <br>
@@ -114,6 +114,15 @@
                   $('.expose').css('z-index','1');
               });
           });
+      </script>
+
+      <script>
+        $("#imgVal").click(function(e) {
+          console.log("image clicked");
+          var imgVal = document.getElementById("imgVal").src;
+        console.log(imgVal);
+        localStorage.setItem("outfitname", imgVal);
+      });
       </script>
   </body>
 </html>

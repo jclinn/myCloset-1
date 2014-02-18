@@ -52,16 +52,26 @@ function goBack()
     </table>
 
      <br>
-     <h1>{{name}}</h1>
+     <h1 id="outfitname"></h1>
      <div class="container formatcenter"> 
-      <img src="{{topURL}}"><img>
+      <img id= "outfitimage" src="../img/pants-bar.png"><img>
     </div>
     <script src="/js/jquery-1.11.0.js"></script>
-    <script src="/js/bootstrap.js"></script>
     <br>
     <br>
      <div class="formatcenter">
           <p>&copy; Teleportation</p>
       </div>
+
+      <!-- using localStorage -->
+      <script> 
+
+        var outfitname= localStorage.getItem("outfitname");
+        //console.log(outfitname);
+        //$("#outfitname").text(outfitname);
+        //var imgSource = document.getElementById("outfitimage").src;
+        //console.log( imgSource);
+        document.getElementById("outfitimage").src = outfitname;
+      </script>
   </body>
 </html>

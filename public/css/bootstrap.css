@@ -6554,3 +6554,8 @@ ul.images li {
     position:absolute; top:0; left:0; z-index:99998;
 }
 
+.floated_img
+{
+    float: left;
+    margin-bottom: 10px;
+}

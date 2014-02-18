@@ -57,10 +57,21 @@
 
     <br>
       {{#each viewo_list.getImg}}
-      <div id="image_box" class="getImg">
+        <div class="floated_img">
+          <img src="{{imageURL1}}" />
+          <img src="{{imageURL2}}" />
+          <img src="{{imageURL3}}" />
+          <img src="{{imageURL4}}" />
+          <a href="#" class="btn btncolor">VIEW</a>
+        </div>
+    <!--  <div id="image_box" class="getImg container">
 
         <div class="col">
-          <img src="{{imageURL}}" />
+          <img src="{{imageURL1}}" />
+          <img src="{{imageURL2}}" />
+          <img src="{{imageURL3}}" />
+          <img src="{{imageURL4}}" />
+          <a href="#" class="btn btncolor">VIEW</a>
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />
@@ -69,7 +80,7 @@
           <img src="{{imageURL}}" />
         </div>-->
 
-      </div> 
+      </div> -->
     {{/each}}
 
      <div class="bottomfixed">

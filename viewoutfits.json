@@ -1,34 +1,40 @@
 {
 	"getImg": [
 		{
-			"name": "Doug Engelbart",
-			"description": "Has awesome pet mice",
-			"imageURL": "../img/Outfit1.jpg"			
+			"imageURL1": "../img/top1.jpg",
+			"imageURL2": "../img/extra1.jpg",
+			"imageURL3": "../img/bottom1.jpg",
+			"imageURL4": "../img/shoe1.jpg"
 		},
 		{
-			"name": "Ivan Sutherland",
-			"description": "Great at sketching",
-			"imageURL": "../img/Outfit2.jpg"			
+			"imageURL1": "../img/top2.jpg",
+			"imageURL2": "../img/extra2.jpg",
+			"imageURL3": "../img/bottom2.jpg",
+			"imageURL4": "../img/shoe2.jpg"			
 		},
 		{
-			"name": "Lucy Suchman",
-			"description": "Loves Trukese navigators",
-			"imageURL": "../img/Outfit3.jpg"			
+			"imageURL1": "../img/top3.jpg",
+			"imageURL2": "../img/extra3.jpg",
+			"imageURL3": "../img/bottom3.jpg",
+			"imageURL4": "../img/shoe3.jpg"			
 		},
 		{
-			"name": "Vannevar Bush",
-			"description": "Has stellar associative memory",
-			"imageURL": "../img/Outfit4.jpg"			
+			"imageURL1": "../img/top4.jpg",
+			"imageURL2": "../img/extra4.jpg",
+			"imageURL3": "../img/bottom4.jpg",
+			"imageURL4": "../img/shoe4.jpg"			
 		},
 		{
-			"name": "Grace Hopper",
-			"description": "Only friend with a Navy ship named after them",
-			"imageURL": "../img/Outfit5.jpg"
+			"imageURL1": "../img/top5.jpg",
+			"imageURL2": "../img/extra5.jpg",
+			"imageURL3": "../img/bottom5.jpg",
+			"imageURL4": "../img/shoe5.jpg"
 		},
 		{
-			"name": "Allen Newell",
-			"description": "Really into psychology",
-			"imageURL": "../img/Outfit6.jpg"
+			"imageURL1": "../img/top6.jpg",
+			"imageURL2": "../img/extra6.jpg",
+			"imageURL3": "../img/bottom6.jpg",
+			"imageURL4": "../img/shoe6.jpg"
 		}
 	]
 }

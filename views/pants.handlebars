@@ -70,7 +70,7 @@
       <div id="image_box" class="getImg">
 
         <div class="col">
-          <img src="{{imageURL}}" />
+          <a href="/viewpants"><img id="imgVal" src="{{imageURL}}" /></a>
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />
@@ -79,12 +79,22 @@
           <img src="{{imageURL}}" />
         </div>-->
 
-      </div> 
-    {{/each}}
+        </div> 
+      {{/each}}
 
      <div class="bottomfixed">
           <p>&copy; Teleportation</p>
       </div>
+
+
+            <script>
+        $("#imgVal").click(function(e) {
+          //console.log("image clicked");
+          var imgVal = document.getElementById("imgVal").src;
+        //console.log(imgVal);
+        localStorage.setItem("viewpants", imgVal);
+      });
+      </script>
 
   </body>
 </html>

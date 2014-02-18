@@ -63,7 +63,7 @@
       <div id="image_box" class="getImg">
 
         <div class="col">
-          <img src="{{imageURL}}" />
+          <img id="imgVal" img src="{{imageURL}}" />
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />
@@ -85,5 +85,14 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+          <script>
+        $("#imgVal").click(function(e) {
+          //console.log("image clicked");
+          var imgVal = document.getElementById("imgVal").src;
+        //console.log(imgVal);
+        localStorage.setItem("outfitname", imgVal);
+      });
+      </script>
   </body>
 </html>

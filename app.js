@@ -37,6 +37,7 @@ var outfitcreated = require('./routes/outfitcreated');
 var viewpants = require('./routes/viewpants');
 var viewtops = require('./routes/viewtops');
 var viewshoes = require('./routes/viewshoes');
+var viewextras = require('./routes/viewextras');
 
 var app = express();
 
@@ -89,6 +90,7 @@ app.get('/outfitcreated', outfitcreated.view);
 app.get('/viewpants', viewpants.view);
 app.get('/viewtops', viewtops.view);
 app.get('/viewshoes', viewshoes.view);
+app.get('/viewextras', viewextras.view);
 
 // Example route
 // app.get('/users', user.list);

@@ -35,6 +35,7 @@ var retakepic = require('./routes/retakepic');
 var item = require('./routes/item');
 var outfitcreated = require('./routes/outfitcreated');
 var viewpants = require('./routes/viewpants');
+var viewtops = require('./routes/viewtops');
 
 var app = express();
 
@@ -85,6 +86,7 @@ app.get('/retakepic', retakepic.view);
 app.get('/item', item.view);
 app.get('/outfitcreated', outfitcreated.view);
 app.get('/viewpants', viewpants.view);
+app.get('/viewtops', viewtops.view);
 
 // Example route
 // app.get('/users', user.list);

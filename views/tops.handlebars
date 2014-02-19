@@ -63,7 +63,7 @@
       <div id="image_box" class="getImg">
 
         <div class="col">
-          <img id="imgVal" img src="{{imageURL}}" />
+          <a href="/viewtops"><img id="imgVal" src="{{imageURL}}" onClick="selectTopCloset('{{imageURL}}')"/></a>
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />
@@ -87,12 +87,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
 
           <script>
-        $("#imgVal").click(function(e) {
+      function selectTopCloset(url) {   
           //console.log("image clicked");
-          var imgVal = document.getElementById("imgVal").src;
+          var imgVal = url;
         //console.log(imgVal);
-        localStorage.setItem("outfitname", imgVal);
-      });
+        localStorage.setItem("viewtops", url);
+      }
       </script>
   </body>
 </html>

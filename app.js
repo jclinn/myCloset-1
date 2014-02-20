@@ -80,7 +80,7 @@ app.get('/home', home.signup);
 app.get('/mycloset', mycloset.view);
 app.get('/viewcloset', viewcloset.getCloset);
 app.get('/tops', tops.getTops);
-app.get('/outfits', outfits.getCategories);
+app.get('/outfits', outfits.view);
 
 app.get('/viewoutfits', viewoutfits.getviewoutfits);
 app.get('/createoutfit', createoutfit.getCloset);

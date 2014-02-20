@@ -3213,6 +3213,8 @@ button.close {
 }
 
 .btn {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
   display: inline-block;
   background-color: #689879;
@@ -6450,7 +6452,7 @@ background: url('../img/wood.jpg');
 }
 
 #image_box {
-   width:90%;
+   width:100%;
    margin:0px auto;
 }
 
@@ -6510,7 +6512,7 @@ ul.images li {
 }
 
 #wrapper {
-    width: 600px;
+    width: 470px;
     height: 104px;
 }
 
@@ -6575,5 +6577,16 @@ ul.images li {
 {
     float: left;
     margin-bottom: 10px;
+}
+
+.colsmall.selection {
+  background-color: green;
+}
+
+.btnalign {
+  display: block;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 

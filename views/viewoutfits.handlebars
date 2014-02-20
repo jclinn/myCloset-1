@@ -69,7 +69,7 @@
         </div> -->
 
 
-        <div class="colsmall" onClick="selectOutfit('{{imageURL1}},{{imageURL1}},{{imageURL1}},{{imageURL1}}'">
+        <div class="colsmall">
           <img src="{{imageURL1}}" />
           <img src="{{imageURL2}}" />
           <img src="{{imageURL3}}" />
@@ -89,11 +89,18 @@
   </div>
 </div>
 
-          <a href="#" class="btn btncolor">VIEW</a>
+          <a href="#" class="btn btncolor btnalign">VIEW</a>
      <div class="bottomfixed">
           <p>&copy; Teleportation</p>
       </div>
    
+     <script>
+      $(".colsmall").click(selectOutfit);
+
+      function selectOutfit(imageURL1, imageURL2, imageURL3, imageURL4) {
+        $(this).toggleClass("selection");
+      }
+     </script>
 
   </body>
 </html>

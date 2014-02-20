@@ -20,6 +20,8 @@
     <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
   
     <script>
+
+
          function validate(){
 	     var un = document.signupForm.username.value;
 	     var pw = document.signupForm.pword.value;
@@ -59,7 +61,7 @@
     </table>
         <div class="container">
           <br>
-            <form name="signupForm" id="signupForm" role="form" method="get" class="navbar-form formatcenter">
+            <form name="signupForm" id="signupForm" role="form" method="post" class="navbar-form formatcenter">
               <input class="span3" id="firstname" type="text" placeholder="First Name" name="firstname">
 	      <br>
               <input class="span3" id="lastname" type="text" placeholder="Last Name" name="lastname">
@@ -68,7 +70,7 @@
               <br>
 	      <input class="span3" type="password" placeholder="Password" id="password" name="pword">
               <br>
-              <button onclick="return validate()" type="submit" class="btn btncolor" id="signupbt">REGISTER</button>
+              <button type="button" class="btn btncolor" id="signupbt">REGISTER</button>
             </form>
          </div> <!--/container -->
       <br>
@@ -79,6 +81,10 @@
       </footer>
       </div>
 
+    <!-- scripts -->
+    <script src ="https://code.jquery.com/jquery.js"></script>
+        <script src="/js/signup.js"></script>
 
+    <!--<script src="https://code.jquery.com/jquery.js"></script>-->
   </body>
 </html>

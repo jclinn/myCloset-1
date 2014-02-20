@@ -61,15 +61,29 @@ function goBack()
   <br> <br>
   <div style="text-align:center;">
   <form action="/retakepic">
-  <input style="padding-left:38%;" type='file' onchange="readURL(this);" />
+  <div class="fileUpload btn btn-color">
+  <span> Take Picture or Upload Image </span>
+  <input class="upload" style="padding-left:38%;" type='file' onchange="readURL(this);" />
+  </div> 
   <br>
   <br>
-  <img id="blah" alt="No image."/>
+  <img id="blah" alt="                                   No image uploaded or taken"/>
+  <p id="filler1"></p>
+  <p id="filler2"></p>
   <br>
-  <input type="submit" value="Upload">
+  <input class="btn btn-color" id="whysospecial" type="submit" value="Put into Closet!">
   </form>
   </div>
   <script type="text/javascript">
+
+$('input[type=file]').change(function () {
+     // console.log(this.files[0].name, this.files[0].type);
+      document.getElementById("filler1").innerHTML += this.files[0].name;
+})
+
+$('input[type=file]').change(function (){
+      document.getElementById("filler2").innerHTML += this.files[0].type;
+})
   function readURL(input) {
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
@@ -97,4 +111,5 @@ function goBack()
     </div> <!-- /container -->
 
   </body>
+
 </html>

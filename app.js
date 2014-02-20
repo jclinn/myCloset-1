@@ -102,6 +102,8 @@ app.get('/viewshoes', viewshoes.view);
 app.get('/viewextras', viewextras.view);
 app.get('/users', users.view);
 
+app.post('/signup/new', signup.signup);
+
 // Example route
 // app.get('/users', user.list);
 

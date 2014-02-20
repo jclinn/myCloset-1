@@ -55,6 +55,10 @@
           
           <a href="/viewoutfits" class="btn btncolor">VIEW OUTFITS</a>
           <br>
+          {{#each makec_list.getCategories}}
+            <a href="/viewoutfits" class="btn btncolor">{{category}}</a>
+          <br>
+          {{/each}}
           <a href="/createoutfit" class="btn btncolor">CREATE OUTFIT</a>
         </div>
      <div class="bottomfixed">

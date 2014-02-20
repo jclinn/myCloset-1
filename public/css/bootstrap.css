@@ -6539,7 +6539,9 @@ ul.images li {
    float: left;
    height: 90px;
    width: 90px;
-   margin: 5px;
+   margin-top: 10px;
+   margin-bottom: 20px;
+   margin-right: 5px;
 }
 
 
@@ -6618,4 +6620,4 @@ ul.images li {
 input[type=submit] {
 	font-family: 'Homenaje';
 }
-
+ 

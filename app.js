@@ -72,6 +72,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', login.view);
+app.get('/login/:user/:password', login.userInfo);
 app.get('/login', login.view);
 app.get('/project/:name', project.viewProject);
 app.get('/signup', signup.view);

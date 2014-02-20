@@ -61,6 +61,7 @@ function initializePage() {
 
 	$('#signupbt').click(function(e) {
 		console.log('clicked');
+
 		var first = $('#signupForm #firstname').val();
 		var last = $('#signupForm #lastname').val();
 		var email = $('#signupForm #email').val();
@@ -71,9 +72,33 @@ function initializePage() {
 			'email':  email,
 			'password': password
 		};
-		$.post('/signup/new', json, function() {
-			window.location.href = '/'; // reload the page
-		});
+
+
+		 var un = document.signupForm.username.value;
+	     var pw = document.signupForm.pword.value;
+	     var valid = false;
+
+	     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	     if(re.test(un)){
+	         valid = true;
+	     }
+	              
+	     if(valid){
+			 $.post('/signup/new', json, function() {
+				window.location.href = '/home'; // reload the page
+			});
+		 	return false;
+	     }
+	     else{
+ 	         alert("Invalid e-mail.");
+	     }
+	     document.signupForm.username.value = "";
+	     document.signupForm.pword.value="";
+	     setTimeout("document.signupForm.username.focus()", 25);
+         setTimeout("document.signupForm.username.select()", 25);
+
+		
 	});
 }
 

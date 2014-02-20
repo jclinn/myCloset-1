@@ -1,0 +1,13 @@
+{
+	"getCategories": [
+		{
+			"category": "SUMMER"
+		},
+		{
+			"category": "SPRING"	
+		},
+		{
+			"category": "WINTER"		
+		}
+	]
+}

@@ -56,22 +56,25 @@
     </table>
 
     <br>
+    <div id= "containersimgLarge">
+      <div id="wrapper">
+          <div id="image_box" class="getImg container">
       {{#each viewo_list.getImg}}
-        <div class="floated_img">
+        <!--<div class="floated_img">
           <img src="{{imageURL1}}" />
           <img src="{{imageURL2}}" />
           <img src="{{imageURL3}}" />
           <img src="{{imageURL4}}" />
           <a href="#" class="btn btncolor">VIEW</a>
-        </div>
-    <!--  <div id="image_box" class="getImg container">
+        </div> -->
 
-        <div class="col">
+
+        <div class="colsmall" onClick="selectOutfit('{{imageURL1}},{{imageURL1}},{{imageURL1}},{{imageURL1}}'">
           <img src="{{imageURL1}}" />
           <img src="{{imageURL2}}" />
           <img src="{{imageURL3}}" />
           <img src="{{imageURL4}}" />
-          <a href="#" class="btn btncolor">VIEW</a>
+
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />
@@ -80,9 +83,13 @@
           <img src="{{imageURL}}" />
         </div>-->
 
-      </div> -->
+      
     {{/each}}
+    </div>
+  </div>
+</div>
 
+          <a href="#" class="btn btncolor">VIEW</a>
      <div class="bottomfixed">
           <p>&copy; Teleportation</p>
       </div>

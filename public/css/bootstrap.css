@@ -6462,7 +6462,15 @@ background: url('../img/wood.jpg');
 .col {
    width:30%;
    float:left;
-   margin:0px 1%;
+   margin:5px;
+   padding:5px;
+}
+
+.colsmall {
+   width:10%;
+   float:left;
+   margin:5px;
+   padding:5px;
 }
 
 .col img{
@@ -6515,6 +6523,15 @@ ul.images li {
    margin-right: auto;
 }
 
+#containersimgLarge {
+   background-color: #ffffff;
+   width: 200px;
+   height: 90%;
+   overflow-x: scroll;
+   margin-left: auto;
+   margin-right: auto;
+}
+
 .square {
    background-color: #00b;
    float: left;
@@ -6559,3 +6576,4 @@ ul.images li {
     float: left;
     margin-bottom: 10px;
 }
+

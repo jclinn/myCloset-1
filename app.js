@@ -7,6 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var project = require('./routes/project');
@@ -38,6 +39,14 @@ var viewpants = require('./routes/viewpants');
 var viewtops = require('./routes/viewtops');
 var viewshoes = require('./routes/viewshoes');
 var viewextras = require('./routes/viewextras');
+var users = require('./routes/users');
+
+// connect to mongo db
+var local_database_name = 'mycloset';
+var local_database_uri = 'mongodb://localhost/' + local_database_name
+var database_uri = process.env.MONGOLAB_URI || local_database_uri
+mongoose.connect(database_uri);
+
 
 var app = express();
 
@@ -91,6 +100,7 @@ app.get('/viewpants', viewpants.view);
 app.get('/viewtops', viewtops.view);
 app.get('/viewshoes', viewshoes.view);
 app.get('/viewextras', viewextras.view);
+app.get('/users', users.view);
 
 // Example route
 // app.get('/users', user.list);

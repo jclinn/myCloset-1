@@ -19,6 +19,7 @@ var mycloset = require('./routes/mycloset');
 var viewcloset = require('./routes/viewcloset');
 var tops = require('./routes/tops');
 var outfits = require('./routes/outfits');
+var camera = require('./routes/camera');
 
 var viewoutfits = require('./routes/viewoutfits');
 var createoutfit = require('./routes/createoutfit');
@@ -41,6 +42,7 @@ var viewshoes = require('./routes/viewshoes');
 var viewextras = require('./routes/viewextras');
 var users = require('./routes/users');
 var profiles = require('./routes/profiles');
+var cameratest = require('./routes/cameratest');
 
 // connect to mongo db
 var local_database_name = 'mycloset';
@@ -66,6 +68,7 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -82,7 +85,7 @@ app.get('/mycloset', mycloset.view);
 app.get('/viewcloset', viewcloset.getCloset);
 app.get('/tops', tops.getTops);
 app.get('/outfits', outfits.view);
-
+app.get('/camera', camera.view);
 app.get('/viewoutfits', viewoutfits.getviewoutfits);
 app.get('/createoutfit', createoutfit.getCloset);
 app.get('/category', category.view);
@@ -94,7 +97,6 @@ app.get('/index', index.view);
 app.get('/pants', pants.getPants);
 app.get('/shoes', shoes.getShoes);
 app.get('/extra', extra.getExtra);
-app.get('/camera', camera.view);
 app.get('/retakepic', retakepic.view);
 app.get('/item', item.view);
 app.get('/outfitcreated', outfitcreated.view);
@@ -105,6 +107,8 @@ app.get('/viewextras', viewextras.view);
 app.get('/users', users.view);
 app.get('/profiles', profiles.view);
 app.post('/signup/new', signup.signup);
+app.post('/camera/new', camera.camera);
+app.get('/cameratest', cameratest.view)
 
 // Example route
 // app.get('/users', user.list);

@@ -617,6 +617,8 @@ a:focus {
 }
 
 .container {
+  width: 200px;
+  display: block;
   margin-right: auto;
   margin-left: auto;
   *zoom: 1;
@@ -6451,6 +6453,9 @@ background: url('../img/wood.jpg');
 #image_box {
    width:100%;
    margin:0px auto;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
 }
 
 #box {
@@ -6617,4 +6622,27 @@ ul.images li {
 input[type=submit] {
 	font-family: 'Homenaje';
 }
- 
+
+#outfitbox {
+  width: 150px;
+  height: auto;
+  margin: 5px;
+  background: white;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.centeralign {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**.centerall {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}**/
+

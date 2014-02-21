@@ -43,6 +43,7 @@ var viewextras = require('./routes/viewextras');
 var users = require('./routes/users');
 var profiles = require('./routes/profiles');
 var cameratest = require('./routes/cameratest');
+var outfitsviewed = require('./routes/outfitsviewed');
 
 // connect to mongo db
 var local_database_name = 'mycloset';
@@ -108,7 +109,8 @@ app.get('/users', users.view);
 app.get('/profiles', profiles.view);
 app.post('/signup/new', signup.signup);
 app.post('/camera/new', camera.camera);
-app.get('/cameratest', cameratest.view)
+app.get('/cameratest', cameratest.view);
+app.get('/outfitsviewed', outfitsviewed.view);
 
 // Example route
 // app.get('/users', user.list);

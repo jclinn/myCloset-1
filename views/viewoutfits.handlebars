@@ -69,7 +69,7 @@
         </div> -->
 
 
-        <div class="colsmall">
+        <div class="colsmall" onclick="selectURL('{{imageURL1}}','{{imageURL2}}','{{imageURL3}}','{{imageURL4}}')">
           <img src="{{imageURL1}}" />
           <img src="{{imageURL2}}" />
           <img src="{{imageURL3}}" />
@@ -89,7 +89,7 @@
   </div>
 </div>
 
-          <a href="#" class="btn btncolor btnalign">VIEW</a>
+          <a href="/outfitsviewed" class="btn btncolor btnalign">VIEW</a>
      <div class="bottomfixed">
           <p>&copy; Teleportation</p>
       </div>
@@ -99,6 +99,38 @@
 
       function selectOutfit(imageURL1, imageURL2, imageURL3, imageURL4) {
         $(this).toggleClass("selection");
+        /*var img1Val = imageURL1;
+        console.log( "top url : " + img1Val);
+        localStorage.removeItem("image1");
+        localStorage.setItem("image1", img1Val);
+        img1Val = imageURL2;
+        localStorage.removeItem("image2");
+        localStorage.setItem("image2", img1Val);
+        img1Val = imageURL3;
+        localStorage.removeItem("image3");
+        localStorage.setItem("image3", img1Val);
+        img1Val = imageURL4;
+        localStorage.removeItem("image4");
+        localStorage.setItem("image4", img1Val);*/
+      }
+
+      function selectURL(imageURL1, imageURL2, imageURL3, imageURL4) {
+        
+        var img1Val = imageURL1;
+        console.log( "top url : " + img1Val);
+        localStorage.removeItem("image1");
+        localStorage.setItem("image1", img1Val);
+        img1Val = imageURL2;
+        console.log( "top url 2: " + img1Val);
+        localStorage.removeItem("image2");
+        localStorage.setItem("image2", img1Val);
+        img1Val = imageURL3;
+        localStorage.removeItem("image3");
+        localStorage.setItem("image3", img1Val);
+        img1Val = imageURL4;
+        localStorage.removeItem("image4");
+        localStorage.setItem("image4", img1Val);
+      
       }
      </script>
 

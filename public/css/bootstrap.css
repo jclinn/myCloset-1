@@ -3213,6 +3213,8 @@ button.close {
 }
 
 .btn {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10px;
   display: inline-block;
   background-color: #689879;
@@ -6439,9 +6441,6 @@ background: url('../img/wood.jpg');
 
 .rightmargin {
   padding-right:10px;
-  border-right-style:solid;
-  border-right: solid #FDF1B6;
-  border-color: #FDF1B6;
 }
 
 .item {
@@ -6450,7 +6449,7 @@ background: url('../img/wood.jpg');
 }
 
 #image_box {
-   width:90%;
+   width:100%;
    margin:0px auto;
 }
 
@@ -6510,7 +6509,7 @@ ul.images li {
 }
 
 #wrapper {
-    width: 600px;
+    width: 470px;
     height: 104px;
 }
 
@@ -6537,7 +6536,9 @@ ul.images li {
    float: left;
    height: 90px;
    width: 90px;
-   margin: 5px;
+   margin-top: 10px;
+   margin-bottom: 20px;
+   margin-right: 5px;
 }
 
 
@@ -6577,6 +6578,17 @@ ul.images li {
     margin-bottom: 10px;
 }
 
+.colsmall.selection {
+  background-color: green;
+}
+
+.btnalign {
+  display: block;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .fileUpload{
 	position: relative;
 	overflow: hidden;
@@ -6605,3 +6617,4 @@ ul.images li {
 input[type=submit] {
 	font-family: 'Homenaje';
 }
+ 

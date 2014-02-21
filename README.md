@@ -1,4 +1,10 @@
-lab4
+myCloset
 ====
 
-Lab 4: Programming with Javascript
+CSE 170 Project - Winter 2014
+
+Contributors:
+
+Judy Lin
+Doris Kwok
+Frank Chao

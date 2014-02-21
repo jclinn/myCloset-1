@@ -20,7 +20,6 @@
   <script src="js/bootstrap.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
-    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
@@ -60,9 +59,9 @@ function goBack()
 <div class="container">
   <br> <br>
   <div style="text-align:center;">
-  <form action="/retakepic">
+  <form class = "imgur-submit" action="/retakepic">
   <div class="fileUpload btn btn-color">
-  <span> Take Picture or Upload Image </span>
+  <span> Take Picture/Upload Image</span>
   <input class="upload" style="padding-left:38%;" type='file' onchange="readURL(this);" />
   </div> 
   <br>
@@ -71,13 +70,19 @@ function goBack()
   <p id="filler1"></p>
   <p id="filler2"></p>
   <br>
-  <input class="btn btn-color" id="whysospecial" type="submit" value="Put into Closet!">
+  <p>Hint: If you want to retake a picture or upload a different picture, just push the button again</p>
+
+  <input class="btn btn-color" id="whysospecial"  value="Put into Closet!" data-action="upload-to-imgur">
   </form>
   </div>
   <script type="text/javascript">
 
+var fileToUpload;
 $('input[type=file]').change(function () {
      // console.log(this.files[0].name, this.files[0].type);
+      console.log(this.files[0]);
+
+      fileToUpload = this.files[0];
       document.getElementById("filler1").innerHTML += this.files[0].name;
 })
 
@@ -98,6 +103,72 @@ $('input[type=file]').change(function (){
                 reader.readAsDataURL(input.files[0]);
             }
         }
+var imgURL;
+$('input[data-action=upload-to-imgur]').click(function upload(e){
+//	console.log("hugs for judy");
+
+	var file = fileToUpload;
+//	console.log("items should be identical" + file);
+	if(!file || !file.type.match(/image.*/)){ console.log("did it die here 1?");
+	return;
+	}
+//	console.log("did it die here 2?");
+	document.body.className = "uploading";
+	var fd = new FormData(); // I wrote about it: https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/
+	console.log(fd); // error could be here
+        fd.append("image", file); // Append the file // or here
+     //   fd.append('Authorization', 'Client-ID 8cefd45719a1d64');//or here
+
+//	console.log("hi me judy <3");
+        var xhr = new XMLHttpRequest(); // Create the XHR (Cross-Domain XHR FTW!!!) Thank you sooooo much imgur.com
+
+	console.log(xhr);
+        xhr.open("POST", "https://api.imgur.com/3/upload.json"); // Boooom!
+    	xhr.setRequestHeader('Authorization', 'Client-ID 8cefd45719a1d64');
+
+	xhr.onload = function(){
+        var link = JSON.parse(xhr.responseText).data.link;
+	imgURL = link;
+	console.log(link);
+        //document.querySelector("#link").href = link;
+        //document.querySelector("#link").innerHTML = link;
+
+
+
+        document.body.className = "uploaded";
+	}
+	// or here even
+        // Ok, I don't handle the errors. An exercice for the reader.
+
+        /* And now, we send the formdata */
+        xhr.send(fd);
+    });
+$('#whysospecial').click(function addImageToDB(e){
+	
+});
+/*
+$('[data-action=upload-to-imgur]').click(function(fileToUpload){
+		console.log(fileToUpload);
+	})
+// separator
+
+$(document).ready(function(){
+	console.log("page has been initialized");
+	initPage();
+});
+
+function initPage(){
+	console.log("wait for da click...");
+	$('#whysospecial').click(share);
+}
+
+function share(e){
+
+console.log("confirmation");
+conesole.log(filesToUpload);
+
+}
+*/
   </script>
  
 

@@ -40,6 +40,7 @@ var viewtops = require('./routes/viewtops');
 var viewshoes = require('./routes/viewshoes');
 var viewextras = require('./routes/viewextras');
 var users = require('./routes/users');
+var profiles = require('./routes/profiles');
 
 // connect to mongo db
 var local_database_name = 'mycloset';
@@ -102,7 +103,7 @@ app.get('/viewtops', viewtops.view);
 app.get('/viewshoes', viewshoes.view);
 app.get('/viewextras', viewextras.view);
 app.get('/users', users.view);
-
+app.get('/profiles', profiles.view);
 app.post('/signup/new', signup.signup);
 
 // Example route

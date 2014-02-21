@@ -6620,4 +6620,19 @@ ul.images li {
 input[type=submit] {
 	font-family: 'Homenaje';
 }
- 
+
+#outfitbox {
+  width: 150px;
+  height: auto;
+  margin: 5px;
+  background: white;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.centeralign {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+

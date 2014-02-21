@@ -12,29 +12,27 @@ function initializePage() {
 
 	$('#loginbt').click(function(e) {
 	  e.preventDefault();
-	  console.log('clicked');
+	  //console.log('clicked');
 	  var email = $('#loginForm #email').val();
 	  var password = $('#loginForm #password').val();
 	  
 	  var url_call ='/login/'+email+'/'+password;
-	/*  models.User
-	  	.find({}).forEach(function (err, user) {
-	  	console.log("user "); 
-	  }); */
-
 	  console.log("email: " + email + " password " + password);
 
 	  function checkUser(user_json) {
-	  	console.log(user_json['email'] + " " +
-	  		user_json['password']);
+	  	//console.log("email from db " + user_json['email'] + " password: " +
+	  	//	user_json['password']);
 	  	var emailDB = user_json['email'];
 	  	var passwordDB = user_json['password'];
-	  	if((emailDB==email) && (passwordDB==password)) {
-	  		console.log("user email matches");
+	  	if(emailDB=="invalid") {
+	  		alert("User not found, please sign up");
+	  	}
+	  	else if((emailDB==email) && (passwordDB==password)) {
+	  		//console.log("user email matches");
 	  		window.location.href ="/home";
 	  	}
 	  	else {
-	  		console.log("invalid user password pair");
+	  		//console.log("invalid user password pair");
 	  		alert("Incorrect username and/or password. Please try again");
 	  	}
 	  }
@@ -52,12 +50,18 @@ function initializePage() {
 
       if(valid){
       //window.location.href = "/home";
-        //issue the GET Request
-	  $.get(url_call, checkUser);
+	      if(password == "") {
+		  	alert("Please enter password");
+		  	return false;
+		  }
+		  else {
+	        //issue the GET Request
+		  	$.get(url_call, checkUser);
+		  }
       return false;
       }
       else{
-          alert("Incorrect username and/or password.");
+          alert("Invalid Email");
       }
 
       document.loginForm.username.value = "";

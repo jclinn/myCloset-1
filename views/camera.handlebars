@@ -70,7 +70,7 @@ function goBack()
   <p id="filler1"></p>
   <p id="filler2"></p>
   <br>
-  <p>Hint: If you want to retake a picture or upload a different picture, just push the button again</p>
+  <p>Hint: If you want to retake a picture or upload a different picture, just push the 'Take Picture' button again</p>
 
   <input class="btn btn-color" id="whysospecial"  value="Put into Closet!" data-action="upload-to-imgur">
   </form>
@@ -128,8 +128,9 @@ $('input[data-action=upload-to-imgur]').click(function upload(e){
 
 	xhr.onload = function(){
         var link = JSON.parse(xhr.responseText).data.link;
-	imgURL = link;
 	console.log(link);
+	imgURL = link;
+	putIntoDB(imgURL);
         //document.querySelector("#link").href = link;
         //document.querySelector("#link").innerHTML = link;
 
@@ -143,9 +144,18 @@ $('input[data-action=upload-to-imgur]').click(function upload(e){
         /* And now, we send the formdata */
         xhr.send(fd);
     });
-$('#whysospecial').click(function addImageToDB(e){
-	
-});
+
+	function putIntoDB(imgURL){
+	var json = {
+		'url': imgURL	
+	};
+
+		$.post('/camera/new', json, function(){
+			window.location.href = '/retakepic';
+		});
+	}
+
+
 /*
 $('[data-action=upload-to-imgur]').click(function(fileToUpload){
 		console.log(fileToUpload);
@@ -180,6 +190,7 @@ conesole.log(filesToUpload);
       </div>
 
     </div> <!-- /container -->
+        <script src="/js/camera.js"></script>
 
   </body>
 

@@ -6646,3 +6646,6 @@ input[type=submit] {
   display: block;
 }**/
 
+.rightpaddings {
+  padding-right: 10px;
+}

@@ -39,9 +39,8 @@ function initializePage() {
 	  	}
 	  }
 
-	  //issue the GET Request
-	  $.get(url_call, checkUser);
-	  /*var un = document.loginForm.username.value;
+	
+	  var un = document.loginForm.username.value;
       var pw = document.loginForm.pword.value;
       var valid = false;
 
@@ -53,6 +52,8 @@ function initializePage() {
 
       if(valid){
       //window.location.href = "/home";
+        //issue the GET Request
+	  $.get(url_call, checkUser);
       return false;
       }
       else{
@@ -63,7 +64,7 @@ function initializePage() {
       document.loginForm.pword.value="";
  	      setTimeout("document.loginForm.username.focus()", 25);
       setTimeout("document.loginForm.username.select()", 25);
-      */
+      
 
 	});
 }

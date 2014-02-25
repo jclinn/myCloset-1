@@ -7,7 +7,21 @@ function selectMyClosetCategory(category) {
 	var user = localStorage.getItem("user");
 	var category= localStorage.getItem("category");
 	console.log("/pants/"+ user+ "/" + category);
-	var url_call = '/pants/'+user+'/'+category;
+	var url_call;
+
+	if(category=='pants') {
+		url_call = '/pants/'+user+'/'+category;
+	}
+	else if(category=='tops') {
+		url_call = '/tops/'+user+'/'+category;
+	}
+	else if(category=='shoes') {
+		url_call = '/shoes/'+user+'/'+category;
+	}
+	else {	//extras
+		url_call = '/extra/'+user+'/'+category;
+	}
+
 	//$.get(url_call);
 	window.location.href=url_call;
 	/*function gotPants( pants_json) {

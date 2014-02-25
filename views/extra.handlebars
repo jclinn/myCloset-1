@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <base href="../../">
     <title>Extra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -60,11 +61,11 @@
     </table>
 
     <br>
-    {{#each extra_list.getImg}}
+    {{#each extra_list}}
       <div id="image_box" class="getImg">
 
         <div class="col">
-          <a href="/viewextras"><img id="imgVal" src="{{imageURL}}" onClick="selectExtraCloset('{{imageURL}}')"/></a>
+          <a href="/viewextras"><img id="imgVal" src="{{url}}" onClick="selectExtraCloset('{{url}}')"/></a>
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />

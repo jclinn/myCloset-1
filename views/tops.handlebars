@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <base href="../../">
     <title>Tops</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -59,11 +60,11 @@
     </table>
 
     <br>
-    {{#each tops_list.getImg}}
+    {{#each tops_list}}
       <div id="image_box" class="getImg">
 
         <div class="col">
-          <a href="/viewtops"><img id="imgVal" src="{{imageURL}}" onClick="selectTopCloset('{{imageURL}}')"/></a>
+          <a href="/viewtops"><img id="imgVal" src="{{url}}" onClick="selectTopCloset('{{url}}')"/></a>
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />

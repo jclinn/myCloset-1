@@ -52,9 +52,10 @@
         </tr>
     </table>
         <div class="container formatcenter">
-          <img class="fixedsized centerimg" src="img/blank-polaroid-frame.png"></img>
-          <a href="/camera" class="btn btncolor">RETAKE</a>
-          <a href="/item" class="btn btncolor">SAVE</a>
+          <img class="fixedsized centerimg" id="taken"></img>
+          <h2> Item Added! </h2>
+          <a href="/camera" class="btn btncolor">CAMERA</a>
+          <a href="/item" class="btn btncolor">MY CLOSET</a>
         </div>
       <br>
       <br>
@@ -66,20 +67,11 @@
 
     <!-- Le javascript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
-
+     <script src="/js/jquery-1.11.0.js"></script>
+     <script>
+        var url = localStorage.getItem("currentURL");
+        console.log("currentURL2 : " + localStorage.getItem("currentURL"));
+        document.getElementById("taken").src = url;
+     </script>
   </body>
 </html>

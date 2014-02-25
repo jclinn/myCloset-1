@@ -7,7 +7,7 @@ var models = require('../models');
 
 exports.view = function(req, res){
 
-  models.Top
+  models.Closet
     .find()
     .exec(renderTops);
 

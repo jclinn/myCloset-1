@@ -146,9 +146,15 @@ $('input[data-action=upload-to-imgur]').click(function upload(e){
     });
 
 	function putIntoDB(imgURL){
-	var json = {
-		'url': imgURL	
-	};
+    var user = localStorage.getItem("user");
+    var category = localStorage.getItem("category");
+  	localStorage.setItem("currentURL", imgURL);
+    console.log("currentURL : " + localStorage.getItem("currentURL"));
+    var json = {
+  		'url': imgURL,
+      'user': user,
+      'category': category
+  	};
 
 		$.post('/camera/new', json, function(){
 			window.location.href = '/retakepic';

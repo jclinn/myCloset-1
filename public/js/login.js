@@ -29,6 +29,7 @@ function initializePage() {
 	  	}
 	  	else if((emailDB==email) && (passwordDB==password)) {
 	  		//console.log("user email matches");
+	  		localStorage.setItem("user", emailDB);
 	  		window.location.href ="/home";
 	  	}
 	  	else {

@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <base href="../../">
     <title>Pants</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -66,11 +67,11 @@
     </table>
 
       <br>
-      {{#each pants_list.getImg}}
+      {{#each pants_list}}
       <div id="image_box" class="getImg">
 
         <div class="col">
-          <a href="/viewpants"><img id="imgVal" src="{{imageURL}}" onClick="selectPantCloset('{{imageURL}}')"/></a>
+          <a href="/viewpants"><img id="imgVal" src="{{url}}" onClick="selectPantCloset('{{url}}')"/></a>
         </div>
         <!--<div class="col">
           <img src="{{imageURL}}" />

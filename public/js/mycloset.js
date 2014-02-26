@@ -1,3 +1,4 @@
+// pull from db by category
 function selectMyClosetCategory(category) {   
 	console.log("clicked " + category);
 	var category = category;
@@ -21,12 +22,13 @@ function selectMyClosetCategory(category) {
 	else {	//extras
 		url_call = '/extra/'+user+'/'+category;
 	}
-
-	//$.get(url_call);
 	window.location.href=url_call;
-	/*function gotPants( pants_json) {
-		window.location.href ="/viewpants";
-	}*/
 }
 
+// pull from db, entire closet
+function viewCloset() {
+	var user = localStorage.getItem("user");
+	var url_call = '/viewcloset/'+user;
+	window.location.href=url_call;
+}
 

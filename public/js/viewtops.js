@@ -77,3 +77,6 @@ function deleteClosetItem() {
 		window.location.href='/mycloset';
 	});
 };
+
+function deleteOutfits() {
+};

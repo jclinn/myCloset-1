@@ -91,6 +91,7 @@ app.get('/outfits', outfits.view);
 app.get('/camera', camera.view);
 app.get('/viewoutfits', viewoutfits.getviewoutfits);
 app.get('/createoutfit', createoutfit.getCloset);
+app.get('/createoutfit/:user', createoutfit.getClosetItem);
 app.get('/category', category.view);
 app.get('/settings', settings.view); 
 app.get('/help', help.view);

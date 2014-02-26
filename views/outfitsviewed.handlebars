@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Oufit Viewed</title>
+    <title>Selected Outfit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -32,6 +32,21 @@ function goBack()
   </head>
 
   <body>
+<!-- Facebook Script -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Tumblr Script -->
+<script src="http://platform.tumblr.com/v1/share.js"></script>
+
+
+
     <table class="logo formatcenter">
         <tr>
           <td style="padding-right:5%;"><button onclick="goBack()" class="pull-left btn_dropdown"><img id="back" src="img/glyphicons_224_chevron-left.png"></button></td>
@@ -71,17 +86,31 @@ function goBack()
           <a href="/outfits" class="btn centeralign btncolor">DELETE</a>
           <br>
     <div class="container formatcenter">
-          <p>SHARE</p>
-          <a href="http://facebook.com" class="btn btncolor"><img src="img/facebook.png" /></a>
+<!-- Facebook share -->
+<div style="padding-bottom: 10px;"class="fb-share-button" data-href="http://mycloset.herokuapp.com/outfitsviewed" data-type="button_count"></div>
+	  <br>
+<!-- Tumblr share -->
+<a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:129px; height:20px; background:url('http://platform.tumblr.com/v1/share_3.png') top left no-repeat transparent;">Share on Tumblr</a>
           <br>
-          <a href="http://tumblr.com" class="btn btncolor"><img src="img/tumblr.png"/></a>
-          <br>
-          <a href="http://googleplus.com" class="btn btncolor"><img src="img/google_plus.png" /></a>
-          <br>
-          <a href="http://instagram.com" class="btn btncolor"><img src="img/instagram.png"/></a>
-    </div>
-        <br>
-    <br>
+<!-- Google plus -->
+	  <!-- Place this tag where you want the share button to render. -->
+<div class="g-plus" data-annotation="bubble" data-action="share"></div>
+
+<!-- Place this tag after the last share tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; 
+    po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; 
+    s.parentNode.insertBefore(po, s);
+  })();
+
+
+</script>
+	  <br>
+	  <br>
+	  <br>
      <div class="formatcenter">
           <p>&copy; Teleportation</p>
       </div>

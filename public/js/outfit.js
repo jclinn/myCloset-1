@@ -1,7 +1,7 @@
 // pull from db, entire closet
 function viewOutfit() {
 	var user = localStorage.getItem("user");
-	var url_call = '/viewoutfit/'+user;
+	var url_call = '/viewoutfits/'+user;
 	window.location.href=url_call;
 }
 

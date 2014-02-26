@@ -114,11 +114,18 @@ app.get('/viewshoes', viewshoes.view);
 app.get('/viewextras', viewextras.view);
 app.get('/users', users.view);
 app.get('/profiles', profiles.view);
+app.get('/cameratest', cameratest.view);
+app.get('/outfitsviewed', outfitsviewed.view);
+
+
 app.post('/signup/new', signup.signup);
 app.post('/camera/new', camera.camera);
 app.post('/createoutfit/new', createoutfit.addOutfit);
-app.get('/cameratest', cameratest.view);
-app.get('/outfitsviewed', outfitsviewed.view);
+app.post('/viewtops/delete', viewtops.deleteTop);
+app.post('/viewpants/delete', viewpants.deletePant);
+app.post('/viewshoes/delete', viewshoes.deleteShoe);
+app.post('/viewextras/delete', viewextras.deleteExtra);
+app.post('/viewcloset/delete', viewcloset.deleteClosetItem);
 
 // Example route
 // app.get('/users', user.list);

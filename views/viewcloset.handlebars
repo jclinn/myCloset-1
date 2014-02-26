@@ -69,7 +69,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each tops_list}}
-            <div class="square"><a href="#"><img src="{{url}}"  class="expose"></a></div>
+            <div class="square"><a href="/item"><img src="{{url}}"  class="expose" onclick="selectClosetItem('{{url}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
@@ -78,7 +78,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each pants_list}}
-            <div class="square"><a href="#" ><img src="{{url}}"  class="expose2"></a></div>
+            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose2" onclick="selectClosetItem('{{url}}')"></a></div>
             <div id="overlay2"></div>
             {{/each}}
        </div>
@@ -87,7 +87,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each shoes_list}}
-            <div class="square"><a href="#" ><img src="{{url}}"  class="expose"></a></div>
+            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose" onclick="selectClosetItem('{{url}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
@@ -96,7 +96,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each extra_list}}
-            <div class="square"><a href="#" ><img src="{{url}}"  class="expose"></a></div>
+            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose" onclick="selectClosetItem('{{url}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
@@ -107,5 +107,13 @@
       <div class="formatcenter">
           <p>&copy; Teleportation</p>
       </div>
+
+      <script>
+        function selectClosetItem(url) {
+          console.log("URL " + url);
+          localStorage.setItem("closetItem", url);
+          //window.location.href = "/item";
+        }
+      </script>
   </body>
 </html>

@@ -60,31 +60,13 @@
     <div id= "containersimgLarge">
       <div id="wrapper">
           <div id="image_box" class="getImg container">
-      {{#each viewo_list.getImg}}
-        <!--<div class="floated_img">
-          <img src="{{imageURL1}}" />
-          <img src="{{imageURL2}}" />
-          <img src="{{imageURL3}}" />
-          <img src="{{imageURL4}}" />
-          <a href="#" class="btn btncolor">VIEW</a>
-        </div> -->
-
-
-        <div class="colsmall" onclick="selectURL('{{imageURL1}}','{{imageURL2}}','{{imageURL3}}','{{imageURL4}}')">
-          <img src="{{imageURL1}}" />
-          <img src="{{imageURL2}}" />
-          <img src="{{imageURL3}}" />
-          <img src="{{imageURL4}}" />
-
+      {{#each outfits_list}}
+        <div class="colsmall" onclick="selectURL('{{topurl}}','{{extraurl}}','{{panturl}}','{{shoeurl}}')">
+          <img src="{{topurl}}" />
+          <img src="{{extraurl}}" />
+          <img src="{{panturl}}" />
+          <img src="{{shoeurl}}" />
         </div>
-        <!--<div class="col">
-          <img src="{{imageURL}}" />
-        </div>
-        <div class="col">
-          <img src="{{imageURL}}" />
-        </div>-->
-
-      
     {{/each}}
     </div>
   </div>
@@ -99,24 +81,24 @@
      <script>
       $(".colsmall").click(selectOutfit);
 
-      function selectOutfit(imageURL1, imageURL2, imageURL3, imageURL4) {
+      function selectOutfit(topurl, extraurl, panturl, shoeurl) {
         $(this).toggleClass("selection");
       }
 
-      function selectURL(imageURL1, imageURL2, imageURL3, imageURL4) {
+      function selectURL(topurl, extraurl, panturl, shoeurl) {
         
-        var img1Val = imageURL1;
+        var img1Val = topurl;
         console.log( "top url : " + img1Val);
         localStorage.removeItem("image1");
         localStorage.setItem("image1", img1Val);
-        img1Val = imageURL2;
+        img1Val = extraurl;
         console.log( "top url 2: " + img1Val);
         localStorage.removeItem("image2");
         localStorage.setItem("image2", img1Val);
-        img1Val = imageURL3;
+        img1Val = panturl;
         localStorage.removeItem("image3");
         localStorage.setItem("image3", img1Val);
-        img1Val = imageURL4;
+        img1Val = shoeurl;
         localStorage.removeItem("image4");
         localStorage.setItem("image4", img1Val);
       

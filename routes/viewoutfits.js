@@ -6,8 +6,17 @@ exports.view = function(req, res){
 };
 
 exports.getviewoutfits = function(req, res){
+	var email = req.params.user;
+
+	models.Outfit
+	.find({"user": email})
+	.exec(findOutfit);
+
 	console.log("hello shame shame shame");
-	res.render( 'viewoutfits', { "viewo_list" : viewo } );
+	function findOutfit(err, outfits) {
+		console.log(outfits);
+		res.render( 'viewoutfits', { "outfits_list" : outfits });
+	}
 };
 
 

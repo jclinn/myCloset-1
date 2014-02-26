@@ -29,6 +29,17 @@
   </head>
 
   <body>
+
+              <!-- Facebook Script -->
+      <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
     <table class="logo formatcenter">
         <tr>
           <td style="padding-right:5%;"><button onclick="goBack()" class="pull-left btn_dropdown"><img id="back" src="img/glyphicons_224_chevron-left.png"></button></td>
@@ -54,6 +65,19 @@
           <img id= "closetItem"><img>
         </div>
 
+    <br>
+    <br>
+
+      <a href="/viewoutfits" class="btn centeralign btncolor">DELETE</a>
+    
+    <br>
+    <div class="container formatcenter">
+
+      <!-- Facebook share -->
+      <div id="hrefshare" style="padding-bottom: 10px;"class="fb-share-button" data-href="http://google.com" data-type="button_count"></div>
+
+    </div>
+
      <br>
      <br>
      <div class="formatcenter">
@@ -63,6 +87,7 @@
 
       <script type="text/javascript">
         var closetItem = localStorage.getItem("closetItem");
+        document.getElementById("hrefshare").setAttribute("data-href", closetItem);
         document.getElementById("closetItem").src = closetItem;
       </script>
   </body>

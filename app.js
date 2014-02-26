@@ -116,6 +116,7 @@ app.get('/users', users.view);
 app.get('/profiles', profiles.view);
 app.post('/signup/new', signup.signup);
 app.post('/camera/new', camera.camera);
+app.post('/createoutfit/new', createoutfit.addOutfit);
 app.get('/cameratest', cameratest.view);
 app.get('/outfitsviewed', outfitsviewed.view);
 

@@ -73,3 +73,15 @@ exports.getClosetItem = function(req, res){
 };
 
 
+exports.addOutfit = function(req, res) {
+	console.log("in add outfit");
+	var form_data = req.body;
+	console.log(form_data);
+
+	var newOutfit = new models.Outfit(form_data);
+
+	newOutfit.save(function(err) {
+		if(err) console.log(err);
+		res.send();
+	});
+};

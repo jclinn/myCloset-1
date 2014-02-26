@@ -8,12 +8,15 @@ function createOutfit() {
 	console.log("user: " + user + " top " + top + 
 		" pant " + pant + " shoe " + shoe + " extra " + extra);
 
+	var album = localStorage.getItem("album");
+
 	var json = {
 		"topurl": top,
 		"panturl": pant,
 		"shoeurl": shoe,
 		"extraurl": extra,
-		"user": user
+		"user": user,
+		"albumurl": album
 	};
 
 	//console.log(json);
@@ -21,4 +24,6 @@ function createOutfit() {
 	$.post('/createoutfit/new', json, function() {
 		window.location.href = '/outfitcreated';
 	});
+
+
 }

@@ -94,7 +94,7 @@
 
     <br>
     <div class="container formatcenter">
-          <a class="btn btncolor" onclick="createOutfit()">CREATE</a>
+          <a id="creation" class="btn btncolor">CREATE</a>
     </div>
 
     <br>
@@ -103,7 +103,29 @@
           <p>&copy; Teleportation</p>
       </div>
 
-
+	<script type="text/javascript">
+		$('a[id=creation]').click(function makeAlbum(e){
+$.ajax({
+        url:'https://api.imgur.com/3/album/',
+        type: 'POST',
+        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Client-ID 8cefd45719a1d64');},
+        success: function(data) {
+                console.log(data);
+		console.log(data.data.id);
+		console.log("http://imgur.com/a/" + data.data.id);
+		var albumURL = "http://imgur.com/a/" + data.data.id;
+		localStorage.setItem("album", albumURL);
+		
+        },
+        error: function(data) {
+                console.log('Error:');
+                console.log(data);
+        }
+});
+		console.log("what up aa=a=aaha");
+		});
+	</script>
+	
         <script src="js/jquery-1.11.0.js"></script>
               <script> 
           $('.expose').click(function(e){

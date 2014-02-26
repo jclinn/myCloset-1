@@ -65,7 +65,8 @@ var OutfitSchema = new Mongoose.Schema({
 	"category1": String,
 	"category2": String,
 	"category3": String,
-	"user": String
+	"user": String,
+	"albumurl": String
 });
 
 exports.Outfit = Mongoose.model('Outfit', OutfitSchema);

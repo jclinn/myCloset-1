@@ -79,4 +79,22 @@ function deleteClosetItem() {
 };
 
 function deleteOutfits() {
+	var user = localStorage.getItem("user");
+	var topurl = localStorage.getItem("image1");
+	var panturl = localStorage.getItem("image3");
+	var shoeurl = localStorage.getItem("image4");
+	var extraurl = localStorage.getItem("image2");
+
+	var json = {
+		'user':user,
+		'topurl': topurl,
+		'panturl': panturl,
+		'shoeurl': shoeurl,
+		'extraurl': extraurl
+	};
+	console.log(json);
+
+	$.post('/viewoutfits/delete', json, function () {
+		window.location.href='/viewoutfits/'+user;
+	});
 };

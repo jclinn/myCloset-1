@@ -19,4 +19,19 @@ exports.getviewoutfits = function(req, res){
 	}
 };
 
+exports.deleteOutfit = function(req, res){
+		var outfit = req.body;
+	console.log(outfit);
+
+	models.Outfit
+		.find(outfit)
+		.remove()
+		.exec(deleteOutfits);
+
+	function deleteOutfits(err) {
+		if(err) console.log(err);
+		res.send();
+	}
+}
+
 

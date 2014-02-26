@@ -126,6 +126,7 @@ app.post('/viewpants/delete', viewpants.deletePant);
 app.post('/viewshoes/delete', viewshoes.deleteShoe);
 app.post('/viewextras/delete', viewextras.deleteExtra);
 app.post('/viewcloset/delete', viewcloset.deleteClosetItem);
+app.post('/viewoutfits/delete', viewoutfits.deleteOutfit);
 
 // Example route
 // app.get('/users', user.list);

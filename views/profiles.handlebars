@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>MANAGE PROFILES</title>
+    <title>Deleted</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -35,12 +35,12 @@ function goBack()
 </script>
   </head>
 
-  <body>
+  <body onload="setTimeout()">
     <table class="logo formatcenter">
         <tr>
           <td style="padding-right:5%;"><button onclick="goBack()" class="pull-left btn_dropdown"><img id="back" src="img/glyphicons_224_chevron-left.png"></button></td>
 
-           <td><h1>MANAGE PROFILES</h1></td>
+           <td><h1>DELETED</h1></td>
           <td class="menuCol">
             <div class="btn-group menu">
             <button class="btn_dropdown" data-toggle="dropdown" id="menuBtn">
@@ -56,19 +56,11 @@ function goBack()
         </tr>
     </table>
     <br>
+      <div class"container formatcenter">
+        <h2>Deleted</h2>
+      </div>
     <br>
-    <div class="container formatcenter">
-          <a href="http://facebook.com" class="btn btncolor"><img src="img/facebook.png" class="rightmargin"/>FACEBOOK</a>
-          <br>
-          <br>
-          <a href="http://tumblr.com" class="btn btncolor"><img src="img/tumblr.png" class="rightmargin"/>TUMBLR</a>
-          <br>
-          <br>
-          <a href="http://googleplus.com" class="btn btncolor"><img src="img/google_plus.png" class="rightmargin"/>GOOGLE+</a>
-          <br>
-          <br>
-          <a href="http://instagram.com" class="btn btncolor"><img src="img/instagram.png" class="rightmargin"/>INSTAGRAM</a>
-    </div>
+    <br>
 
      <div class="formatcenter bottomfixed">
           <p>&copy; Teleportation</p>
@@ -76,20 +68,10 @@ function goBack()
 
     <!-- Le javascript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script>
+        setTimeout(function () {
+        window.location.href = "/home";}, 5000);
+    </script>
 
   </body>
 </html>

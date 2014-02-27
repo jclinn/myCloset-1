@@ -67,9 +67,7 @@ function goBack()
     </div>
     
         <br>
-          <a href="/viewoutfits" class="btn centeralign btncolor">VIEW OUTFITS</a>
-          <a href="/outfits" class="btn centeralign btncolor">SAVE</a>
-          <a href="/outfits" class="btn centeralign btncolor">DELETE</a>
+          <a class="btn centeralign btncolor" onclick="getOutfits()">VIEW OUTFITS</a>
 
     <br>
     <br>
@@ -95,6 +93,12 @@ function goBack()
 
         var topVal = localStorage.getItem("topimage");
         document.getElementById("topVal").src = topVal;
+      </script>
+      <script>
+        function getOutfits() {
+            var user = localStorage.getItem("user");
+            window.location.href = '/viewoutfits/'+user;
+        }
       </script>
   </body>
 </html>

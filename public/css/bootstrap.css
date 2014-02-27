@@ -6279,6 +6279,7 @@ a.badge:focus {
   color: #454545;
   font-size: 20px;
   box-shadow: 0px 1px 10px #5E5E5E;
+  margin-bottom: 5px;
 }
 
 .forgPW {
@@ -6645,4 +6646,8 @@ input[type=submit] {
 
 .rightpaddings {
   padding-right: 10px;
+}
+
+.marginbottom {
+  margin-bottom: 5px;
 }

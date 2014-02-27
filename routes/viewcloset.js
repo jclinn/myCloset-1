@@ -58,3 +58,19 @@ exports.getCloset = function(req, res){
 
 	}
 };
+
+
+exports.deleteClosetItem = function(req, res) {
+	var closetItem = req.body;
+	console.log(closetItem);
+
+	models.Closet
+		.find(closetItem)
+		.remove()
+		.exec(deleteItem);
+
+	function deleteItem(err) {
+		if(err) console.log(err);
+		res.send();
+	}
+}

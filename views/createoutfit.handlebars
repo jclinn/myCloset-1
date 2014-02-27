@@ -94,7 +94,7 @@
 
     <br>
     <div class="container formatcenter">
-          <a id="creation" class="btn btncolor" onClick="createOutfit()">CREATE</a>
+          <a id="creation" class="btn btncolor">CREATE</a>
     </div>
 
     <br>
@@ -178,6 +178,8 @@ $.ajax({
 		var albumURL = "http://imgur.com/a/" + data.data.id;
 		localStorage.setItem("album", albumURL);
 		console.log(albumURL);
+		createOutfit();
+		
 /*
 
 		$.ajax({

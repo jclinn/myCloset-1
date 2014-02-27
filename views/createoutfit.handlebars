@@ -47,7 +47,7 @@
                 <li class="divider"></li>
                 <li class="rightMargin"><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTINGS</a></li>
                 <li class="divider"></li>
-                <li class="rightMargin"><a tabindex="-1" href="/"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+                <li class="rightMargin"><a tabindex="-1" href="/" onclick="logout2()"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
                </ul>
         </div>  
       </td>
@@ -169,7 +169,8 @@
 		extra =  (extra.substring(19,26));
 
 		$('a[id=creation]').click(function makeAlbum(e){
-$.ajax({
+  
+  $.ajax({
         url:'https://api.imgur.com/3/album/',
         type: 'POST',
 	data: 'ids=' + toppings + ',' + pant + ',' + shoe + ',' + extra,
@@ -193,11 +194,11 @@ $.ajax({
 		});
 */
 	
-        },
+       },
         error: function(data) {
                 console.log('Error:');
                 console.log(data);
-        }
+        
 	
 });
 
@@ -207,6 +208,7 @@ $.ajax({
 
       <script src ="https://code.jquery.com/jquery.js"></script>
         <script src="/js/createoutfit.js"></script>
+        <script src="/js/logout.js"></script>
 
   </body>
 </html>

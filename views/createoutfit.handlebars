@@ -174,7 +174,7 @@
         url:'https://api.imgur.com/3/album/',
         type: 'POST',
 	data: 'ids=' + toppings + ',' + pant + ',' + shoe + ',' + extra,
-        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer 172020a5fd35cfcd7477ff6e2d679de343dac919');},
+        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ebf54dd712b299a3795d24646c8c0e8a41146b73');},
         success: function(data) {
 		var albumURL = "http://imgur.com/a/" + data.data.id;
 		localStorage.setItem("album", albumURL);
@@ -198,8 +198,7 @@
         error: function(data) {
                 console.log('Error:');
                 console.log(data);
-        
-	
+	}
 });
 
 		console.log("what up aa=a=aaha");

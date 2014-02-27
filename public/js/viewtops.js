@@ -66,14 +66,14 @@ function deleteClosetItem() {
 	var user = localStorage.getItem("user");
 	var url = localStorage.getItem("closetItem");
 	var category = localStorage.getItem("category");
-	console.log("user: " + user + " url " + url);
+	console.log("user: " + user + " url " + url + " category " + category);
 	var json = {
 		'user': user,
 		'url': url,
 		'category': category
 	};
 
-	$.post('/viewcloset/delete', json, function () {
+	$.post('/item/delete', json, function () {
 		window.location.href='/mycloset';
 	});
 };
@@ -98,3 +98,4 @@ function deleteOutfits() {
 		window.location.href='/viewoutfits/'+user;
 	});
 };
+

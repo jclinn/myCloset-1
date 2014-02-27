@@ -170,13 +170,13 @@
 		var shoe = localStorage.getItem("shoeimage");
 		var extra = localStorage.getItem("extraimage");
 
-		toppings = (toppings.substring(19,26));
+	/*	toppings = (toppings.substring(19,26));
 		pant =  (pant.substring(19,26));
 		shoe =  (shoe.substring(19,26));
-		extra =  (extra.substring(19,26));
+		extra =  (extra.substring(19,26));*/
 
 		$('a[id=creation]').click(function makeAlbum(e){
-  
+  /*
   $.ajax({
         url:'https://api.imgur.com/3/album/',
         type: 'POST',
@@ -185,7 +185,7 @@
         success: function(data) {
 		var albumURL = "http://imgur.com/a/" + data.data.id;
 		localStorage.setItem("album", albumURL);
-		console.log(albumURL);
+		console.log(albumURL);*/
 		createOutfit();
 		
 /*
@@ -201,13 +201,13 @@
 		});
 */
 	
-     },
+    /*    },
         error: function(data) {
                 console.log('Error:');
                 console.log(data);
         
 	
-});
+});*/
 
 		console.log("what up aa=a=aaha");
 		});

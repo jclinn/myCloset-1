@@ -104,7 +104,7 @@
       </div>
 
 	
-        <script src="js/jquery-1.11.0.js"></script>
+  <!--      <script src="js/jquery-1.11.0.js"></script>
               <script> 
           $('.expose').click(function(e){
             console.log("in explose");
@@ -117,9 +117,16 @@
                   $('.expose').css('z-index','1');
               });
           });
-      </script>
-
+      </script> -->
+      <script src="/js/jquery-1.11.0.js"></script>
       <script>
+      $(".expose").click(selectOutfit);
+
+      function selectOutfit(topurl, extraurl, panturl, shoeurl) {
+        $(this).toggleClass("selection");
+      };
+
+
       function selectImage(url) {
           console.log("image clicked");
           //var imgVal = document.getElementById("imgVal").src;
@@ -127,7 +134,7 @@
         console.log(imgVal);
         localStorage.removeItem("extraimage");
         localStorage.setItem("extraimage", imgVal);
-      }
+      };
       </script>
       <script>
         function selectImageShoe(url) {
@@ -194,7 +201,7 @@
 		});
 */
 	
-       },
+     },
         error: function(data) {
                 console.log('Error:');
                 console.log(data);

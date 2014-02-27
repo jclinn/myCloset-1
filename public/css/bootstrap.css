@@ -6585,6 +6585,11 @@ ul.images li {
   background-color: green;
 }
 
+.expose.selection {
+  border: 5px solid green;
+  border-radius: 4px;
+}
+
 .btnalign {
   display: block;
   width: 80px;

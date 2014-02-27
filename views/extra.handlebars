@@ -53,7 +53,7 @@
                 <li class="divider"></li>
                 <li class="rightMargin"><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTINGS</a></li>
                 <li class="divider"></li>
-                <li class="rightMargin"><a tabindex="-1" href="/"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+                <li class="rightMargin"><a tabindex="-1" href="/" onclick="logout2()"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
                </ul>
         </div>  
       </td>
@@ -82,7 +82,7 @@
           <p>&copy; Teleportation</p>
       </div>
 
-    <script>
+      <script>
       function selectExtraCloset(url) {   
           //console.log("image clicked");
           var imgVal = url;
@@ -90,6 +90,6 @@
         localStorage.setItem("viewextras", url);
       }
       </script>
-
+        <script src="/js/logout.js"></script>
   </body>
 </html>

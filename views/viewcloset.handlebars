@@ -46,24 +46,12 @@
                 <li class="divider"></li>
                 <li class="rightMargin"><a tabindex="-1" href="/settings"><img id="setting" src="img/glyphicons_136_cogwheel.png" class="rightMargin">SETTINGS</a></li>
                 <li class="divider"></li>
-                <li class="rightMargin"><a tabindex="-1" href="/"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
+                <li class="rightMargin"><a tabindex="-1" href="/" onclick="logout2()"><img id="logout" src="img/glyphicons_388_exit.png" class="rightMargin">LOG OUT</a></li>
                </ul>
         </div>  
       </td>
         </tr>
     </table>
-
-<!--<div id="image_box" class="getImg">    
-<ul class="images">
-{{#each viewclo_list.getImg}}
-      <div class="col2">
-        <li><img src="{{imageURL}}"/></li>
-        </div>
-{{/each}}
-</ul>
-</div>
-      <div class="container">
--->
 
     <br>
     <div id="containersimg">
@@ -115,5 +103,6 @@
           //window.location.href = "/item";
         }
       </script>
+      <script src="/js/logout.js"></script>
   </body>
 </html>

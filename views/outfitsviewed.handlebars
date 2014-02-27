@@ -87,14 +87,14 @@ function goBack()
           <br>
     <div class="container formatcenter">
 <!-- Facebook share -->
-<div id="hrefshare" style="padding-bottom: 10px;"class="fb-share-button" data-href="http://google.com" data-type="button_count"></div>
+<div id="hrefshare" style="padding-bottom: 10px;"class="fb-share-button" data-href="https://google.com" data-type="button_count"></div>
 	  <br>
 <!-- Tumblr share -->
-<a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:129px; height:20px; background:url('http://platform.tumblr.com/v1/share_3.png') top left no-repeat transparent;">Share on Tumblr</a>
+<a id="tumblr" href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:129px; height:20px; background:url('http://platform.tumblr.com/v1/share_3.png') top left no-repeat transparent;">Share on Tumblr</a>
           <br>
 <!-- Google plus -->
 	  <!-- Place this tag where you want the share button to render. -->
-<div class="g-plus" data-annotation="bubble" data-action="share"></div>
+<!--<button class="g-plus g-interactivepost" data-annotation="bubble" data-action="share"></button>-->
 
 <!-- Place this tag after the last share tag. -->
 <script type="text/javascript">
@@ -139,7 +139,10 @@ function goBack()
         function changeURL() {
           console.log("getting in load");
           //$("#hrefshare").data('href',"http://facebook.com");
-          document.getElementById("hrefshare").setAttribute("data-href", "http://facebook.com");
+     	  var album = localStorage.getItem("album");
+          document.getElementById("hrefshare").setAttribute("data-href", album);
+	  document.getElementById("tumblr").setAttribute("href", "http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fimgur.com%2Fa%2F" + album.substring(19,24));
+
         }
       </script>
       <script src="/js/viewtops.js"></script>

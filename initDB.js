@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 var models   = require('./models');
 
 // connect to mongo db
-var local_database_name = 'mycloset2';
+var local_database_name = 'mycloset';
 var local_database_uri = 'mongodb://localhost/' + local_database_name
 var database_uri = process.env.MONGOLAB_URI || local_database_uri
 mongoose.connect(database_uri);

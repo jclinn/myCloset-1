@@ -170,18 +170,33 @@
 		var shoe = localStorage.getItem("shoeimage");
 		var extra = localStorage.getItem("extraimage");
 
-		toppings = (toppings.substring(19,26));
-		pant =  (pant.substring(19,26));
-		shoe =  (shoe.substring(19,26));
-		extra =  (extra.substring(19,26));
+		var ids;
+		if(toppings != null){
+			toppings = (toppings.substring(19,26));
+			ids = toppings;
+		}
+
+		if(pant != null){
+			pant =  (pant.substring(19,26));
+			ids = ids + ',' + pant;
+		}
+
+		if(shoe != null){
+			shoe =  (shoe.substring(19,26));
+			ids = ids + ',' + shoe;
+		}
+		if(extra != null){
+			extra =  (extra.substring(19,26));
+			ids = ids + ',' + extra;
+		}
 
 		$('a[id=creation]').click(function makeAlbum(e){
   
   $.ajax({
         url:'https://api.imgur.com/3/album/',
         type: 'POST',
-	data: 'ids=' + toppings + ',' + pant + ',' + shoe + ',' + extra,
-        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ebf54dd712b299a3795d24646c8c0e8a41146b73');},
+	data: ids,
+        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer 755db46aa89039f57251646c03769cab409a46d2');},
         success: function(data) {
 		var albumURL = "http://imgur.com/a/" + data.data.id;
 		localStorage.setItem("album", albumURL);

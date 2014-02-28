@@ -6282,6 +6282,10 @@ a.badge:focus {
   margin-bottom: 5px;
 }
 
+.shadow {
+    box-shadow: 0px 2px 10px #5E5E5E;
+}
+
 .forgPW {
   font-family:'koushikiL';
   color: #454545;

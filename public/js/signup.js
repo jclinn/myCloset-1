@@ -87,7 +87,7 @@ function initializePage() {
 	     if(valid){
 			 $.post('/signup/new', json, function() {
 			 	localStorage.setItem("user", email);
-				window.location.href = '/home'; // reload the page
+				window.location.href = '/intro'; // reload the page
 			});
 		 	return false;
 	     }

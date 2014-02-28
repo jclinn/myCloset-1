@@ -57,7 +57,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each tops_list}}
-            <div class="square"><a href="/item"><img src="{{url}}"  class="expose" onclick="selectClosetItem('{{url}}')"></a></div>
+            <div class="square"><a href="/item"><img src="{{url}}"  class="expose" onclick="selectClosetItemTop('{{url}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
@@ -66,7 +66,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each pants_list}}
-            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose2" onclick="selectClosetItem('{{url}}')"></a></div>
+            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose2" onclick="selectClosetItemPant('{{url}}')"></a></div>
             <div id="overlay2"></div>
             {{/each}}
        </div>
@@ -75,7 +75,7 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each shoes_list}}
-            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose" onclick="selectClosetItem('{{url}}')"></a></div>
+            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose" onclick="selectClosetItemShoe('{{url}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
@@ -84,24 +84,48 @@
     <div id="containersimg">
         <div id="wrapper" >
           {{#each extra_list}}
-            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose" onclick="selectClosetItem('{{url}}')"></a></div>
+            <div class="square"><a href="/item" ><img src="{{url}}"  class="expose" onclick="selectClosetItemExtra('{{url}}')"></a></div>
             <div id="overlay"></div>
             {{/each}}
        </div>
     </div>
-
-   
+      <div class="container formatcenter">
+      <a href="/category" class="btn btncolor">ADD ITEM</a>
+      <div>
       <br> <br>
       <div class="formatcenter">
           <p>&copy; Teleportation</p>
       </div>
 
       <script>
-        function selectClosetItem(url) {
+        function selectClosetItemTop(url) {
           console.log("URL " + url);
           localStorage.setItem("closetItem", url);
+          localStorage.setItem("category", "tops");
           //window.location.href = "/item";
-        }
+        };
+
+        function selectClosetItemPant(url) {
+          console.log("URL " + url);
+          localStorage.setItem("closetItem", url);
+          localStorage.setItem("category", "pants");
+          //window.location.href = "/item";
+        };
+
+        function selectClosetItemShoe(url) {
+          console.log("URL " + url);
+          localStorage.setItem("closetItem", url);
+          localStorage.setItem("category", "shoes");
+          //window.location.href = "/item";
+        };
+
+        function selectClosetItemExtra(url) {
+          console.log("URL " + url);
+          localStorage.setItem("closetItem", url);
+          localStorage.setItem("category", "extra");
+          //window.location.href = "/item";
+        };
+
       </script>
       <script src="/js/logout.js"></script>
   </body>

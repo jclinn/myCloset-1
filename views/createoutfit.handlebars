@@ -103,7 +103,7 @@
           <p>&copy; Teleportation</p>
       </div>
 
-	
+
   <!--      <script src="js/jquery-1.11.0.js"></script>
               <script> 
           $('.expose').click(function(e){
@@ -164,11 +164,11 @@
       }
       </script>
 
-	<script type="text/javascript">
-		var toppings = localStorage.getItem("topimage");
-		var pant = localStorage.getItem("pantimage"); 
-		var shoe = localStorage.getItem("shoeimage");
-		var extra = localStorage.getItem("extraimage");
+  <script type="text/javascript">
+    var toppings = localStorage.getItem("topimage");
+    var pant = localStorage.getItem("pantimage"); 
+    var shoe = localStorage.getItem("shoeimage");
+    var extra = localStorage.getItem("extraimage");
 
 		var ids;
 		if(toppings != null){
@@ -190,7 +190,7 @@
 			ids = ids + ',' + extra;
 		}
 
-		$('a[id=creation]').click(function makeAlbum(e){
+    $('a[id=creation]').click(function makeAlbum(e){
   
   $.ajax({
         url:'https://api.imgur.com/3/album/',
@@ -198,34 +198,34 @@
 	data: ids,
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer 755db46aa89039f57251646c03769cab409a46d2');},
         success: function(data) {
-		var albumURL = "http://imgur.com/a/" + data.data.id;
-		localStorage.setItem("album", albumURL);
-		console.log(albumURL);
-		createOutfit();
-		
+  	  var albumURL = "http://imgur.com/a/" + data.data.id;
+	    localStorage.setItem("album", albumURL);
+   	 console.log(albumURL);
+    	createOutfit();
+
 /*
 
-		$.ajax({
-			url: 'https://api.imgur.com/3/album/' + albumID,
-			type: 'PUT',
-		        beforeSend: function(xhr){xhr.setRequestHeader('Authorization: Bearer 52edeaf53dcd7bf9c74b23fe5ddcb21414027b00');},
-			success: function(data){
-				console.log("much success");
-			//	data.data[0] = toppings;
-			}
-		});
+    $.ajax({
+      url: 'https://api.imgur.com/3/album/' + albumID,
+      type: 'PUT',
+            beforeSend: function(xhr){xhr.setRequestHeader('Authorization: Bearer 52edeaf53dcd7bf9c74b23fe5ddcb21414027b00');},
+      success: function(data){
+        console.log("much success");
+      //  data.data[0] = toppings;
+      }
+    });
 */
-	
+
      },
         error: function(data) {
                 console.log('Error:');
                 console.log(data);
-	}
+  }
 });
 
-		console.log("what up aa=a=aaha");
-		});
-	</script>
+    console.log("what up aa=a=aaha");
+    });
+  </script>
 
       <script src ="https://code.jquery.com/jquery.js"></script>
         <script src="/js/createoutfit.js"></script>

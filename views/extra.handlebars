@@ -105,10 +105,10 @@
   //ga('create', 'UA-48586850-1', {'home': 'click'});
   ga('send', 'pageview');
 
-        function goBack()
+                function goBack()
         {
           console.log("error");
-        ga('send', 'event', 'back', 'click', {'hitCallback': 
+        ga('send', 'event', 'back2', 'click', {'hitCallback': 
           function() {
             window.history.back();
           }
@@ -118,7 +118,7 @@
 
         function goMyCloset() {
           console.log("my closet clicked");
-          ga('send', 'event', 'home', 'click', {'hitCallback':
+          ga('send', 'event', 'mycloset', 'click', {'hitCallback':
             function() {
             window.location.href = "/mycloset";
           }
@@ -126,7 +126,7 @@
       };
 
       function goCamera() {
-        ga('send', 'event', 'home', 'click', {'hitCallback':
+        ga('send', 'event', 'camera', 'click', {'hitCallback':
           function() {
             window.location.href = "/category";
           }
@@ -134,7 +134,7 @@
       };
 
       function goOutfits() {
-        ga('send', 'event', 'home', 'click', {'hitCallback':
+        ga('send', 'event', 'outfits', 'click', {'hitCallback':
           function() {
             window.location.href = "/outfits";
           }
@@ -142,7 +142,7 @@
       };
 
       function goHelp() {
-        ga('send', 'event', 'home', 'click', {'hitCallback':
+        ga('send', 'event', 'help', 'click', {'hitCallback':
           function() {
             window.location.href = "/help";
           }

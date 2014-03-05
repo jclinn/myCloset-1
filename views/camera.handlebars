@@ -73,6 +73,8 @@
   <p>Hint: If you want to retake a picture or upload a different picture, just push the 'Take Picture' button again</p>
 
   <input class="btn btn-color" id="whysospecial"  type="submit" value="Put into Closet!" data-action="upload-to-imgur">
+  <p id="filler3"></p>
+
   </form>
   </div>
   <script type="text/javascript">
@@ -125,6 +127,7 @@ $('input[data-action=upload-to-imgur]').click(function upload(e){
 	console.log(xhr);
         xhr.open("POST", "https://api.imgur.com/3/upload.json"); // Boooom!
     	xhr.setRequestHeader('Authorization', 'Client-ID 8cefd45719a1d64');
+        document.getElementById("filler3").innerHTML += "Uploading...";
 
 	xhr.onload = function(){
         var link = JSON.parse(xhr.responseText).data.link;

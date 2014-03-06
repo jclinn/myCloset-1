@@ -197,7 +197,7 @@
         url:'https://api.imgur.com/3/album/',
         type: 'POST',
 	data: ids,
-        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer 09e73710208ce28e3c32019089074da8996c3b57');},
+        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer 31582f9d4669142dca5af05c16daedbdca23138a');},
         success: function(data) {
   	  var albumURL = "http://imgur.com/a/" + data.data.id;
 	    localStorage.setItem("album", albumURL);

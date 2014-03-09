@@ -6524,7 +6524,7 @@ ul.images li {
 }
 
 #containersimg {
-   background-color: rgba(0,0,0,0.3);
+   background-color: rgba(0,0,0,0.2);
    width: 65%;
    overflow-x: scroll;
    margin-left: auto;
@@ -6532,7 +6532,7 @@ ul.images li {
 }
 
 #containersimgLarge {
-   background-color: #ffffff;
+   background-color: rgba(0,0,0,0.2);
    width: 100%;
    overflow-x: scroll;
    margin-left: auto;

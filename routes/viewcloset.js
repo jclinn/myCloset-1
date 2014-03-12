@@ -4,7 +4,7 @@ exports.view = function(req, res){
   res.render('viewcloset');
 };
 
-
+// generate json object with closet items by user
 exports.getCloset = function(req, res){
 	var email = req.params.user;
 	var tops = "tops";

@@ -10,9 +10,9 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-
+	// error checking for user input for signup
 	$('#signupbt').click(function(e) {
-		console.log('clicked');
+		//console.log('clicked');
 
 		var first = $('#signupForm #firstname').val();
 		var last = $('#signupForm #lastname').val();

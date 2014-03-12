@@ -20,8 +20,6 @@ exports.getPants = function(req, res){
 		console.log(pantsDB);
 		res.render('pants', {'pants_list': pantsDB});
 	}
-		 // res.render("pants");
-	//console.log("hello");
-	//res.render( 'pants', { "pants_list" : pants } );
+
 };
 

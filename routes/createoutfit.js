@@ -3,10 +3,13 @@ var pants = require("../pants.json");
 var shoes = require("../shoes.json");
 var extra = require("../extra.json");
 var models = require('../models');
+
+// render createoutfit view
 exports.view = function(req, res){
   res.render('createoutfit');
 };
 
+// grab from db to populate closet to create outfit from
 exports.getCloset =function(req, res) {
   res.render('createoutfit', { 
   	"makeo_list" : tops,
@@ -18,15 +21,18 @@ exports.getCloset =function(req, res) {
   	);
 };
 
+//grab from db to populate closet to create outfit (based on user)
+// the one we are currently using
 exports.getClosetItem = function(req, res){
 	var email = req.params.user;
 	var tops = "tops";
-	console.log("email: " + email + " category: " + tops);
+	//console.log("email: " + email + " category: " + tops);
 	var tops;
 	var pants;
 	var shoes;
 	var extra;
 
+	// grab from db
 	models.Closet
 		.find({"user": email, 
 			   "category": tops})
@@ -72,7 +78,7 @@ exports.getClosetItem = function(req, res){
 	}
 };
 
-
+// add outfit to db
 exports.addOutfit = function(req, res) {
 	console.log("in add outfit");
 	var form_data = req.body;

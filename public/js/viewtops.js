@@ -1,3 +1,6 @@
+/*
+* deletes for individual categories, from closet, from outfits
+*/
 function deleteTops() {
 	var user = localStorage.getItem("user");
 	var url = localStorage.getItem("viewtops");

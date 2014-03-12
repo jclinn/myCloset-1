@@ -1,6 +1,6 @@
 // pull from db by category
 function selectMyClosetCategory(category) {   
-	console.log("clicked " + category);
+	//console.log("clicked " + category);
 	var category = category;
 	//console.log(imgVal);
 	localStorage.setItem("category", category);

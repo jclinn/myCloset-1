@@ -1,16 +1,17 @@
 
 var Mongoose = require('mongoose');
 
-
+//User collection
 var UserSchema = new Mongoose.Schema({
 	"first": String,
 	"last" : String,
   	"email": String,
 	"password": String
 });
-
+// address as User when adding to collection
 exports.User = Mongoose.model('User', UserSchema);
 
+//Closet collection
 var ClosetSchema = new Mongoose.Schema({
 	"url": String,
 	"user": String,
@@ -19,6 +20,22 @@ var ClosetSchema = new Mongoose.Schema({
 
 exports.Closet = Mongoose.model('Closet', ClosetSchema);
 
+//outfit collection
+var OutfitSchema = new Mongoose.Schema({
+	"topurl": String,
+	"panturl": String,
+	"shoeurl": String,
+	"extraurl": String,
+	"category1": String,
+	"category2": String,
+	"category3": String,
+	"user": String,
+	"albumurl": String
+});
+
+exports.Outfit = Mongoose.model('Outfit', OutfitSchema);
+
+// below collections are not used
 var TopSchema = new Mongoose.Schema ({
 	"url": String,
 	"user": String,
@@ -57,16 +74,4 @@ var CategorySchema = new Mongoose.Schema ({
 
 exports.Category = Mongoose.model('Category', CategorySchema);
 
-var OutfitSchema = new Mongoose.Schema({
-	"topurl": String,
-	"panturl": String,
-	"shoeurl": String,
-	"extraurl": String,
-	"category1": String,
-	"category2": String,
-	"category3": String,
-	"user": String,
-	"albumurl": String
-});
 
-exports.Outfit = Mongoose.model('Outfit', OutfitSchema);

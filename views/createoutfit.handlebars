@@ -105,20 +105,6 @@
       </div>
 
 
-  <!--      <script src="js/jquery-1.11.0.js"></script>
-              <script> 
-          $('.expose').click(function(e){
-            console.log("in explose");
-              $(this).css('z-index','99999');
-              $('#overlay').fadeIn(300);
-          });
-
-          $('#overlay').click(function(e){
-              $('#overlay').fadeOut(300, function(){
-                  $('.expose').css('z-index','1');
-              });
-          });
-      </script> -->
       <script src="/js/jquery-1.11.0.js"></script>
       <script>
       $(".expose").click(selectOutfit);
@@ -129,7 +115,7 @@
 
 
       function selectImage(url) {
-          console.log("image clicked");
+          //console.log("image clicked");
           //var imgVal = document.getElementById("imgVal").src;
           var imgVal = url;
         console.log(imgVal);
@@ -139,7 +125,7 @@
       </script>
       <script>
         function selectImageShoe(url) {
-          console.log("image clicked");
+          //console.log("image clicked");
           var shoeVal = url
         console.log(shoeVal);
         localStorage.removeItem("shoeimage");
@@ -148,7 +134,7 @@
       </script>
       <script>
         function selectImagePant(url) {
-          console.log("image clicked");
+          //console.log("image clicked");
           var pantVal = url
         console.log(pantVal);
         localStorage.removeItem("pantimage");
@@ -157,7 +143,7 @@
       </script>
       <script>
         function selectImageTop(url) {
-          console.log("image clicked");
+          //console.log("image clicked");
           var topVal = url
         console.log(topVal);
         localStorage.removeItem("topimage");
@@ -252,7 +238,7 @@
             window.history.back();
           }
         });
-        //window.history.back();
+
         };
 
         function goMyCloset() {

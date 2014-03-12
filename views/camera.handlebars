@@ -107,21 +107,21 @@ $('input[type=file]').change(function (){
         }
 var imgURL;
 $('input[data-action=upload-to-imgur]').click(function upload(e){
-//	console.log("hugs for judy");
+
 
 	var file = fileToUpload;
 //	console.log("items should be identical" + file);
 	if(!file || !file.type.match(/image.*/)){ console.log("did it die here 1?");
 	return;
 	}
-//	console.log("did it die here 2?");
+
 	document.body.className = "uploading";
 	var fd = new FormData(); // I wrote about it: https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/
 	console.log(fd); // error could be here
         fd.append("image", file); // Append the file // or here
      //   fd.append('Authorization', 'Client-ID 8cefd45719a1d64');//or here
 
-//	console.log("hi me judy <3");
+
         var xhr = new XMLHttpRequest(); // Create the XHR (Cross-Domain XHR FTW!!!) Thank you sooooo much imgur.com
 
 	console.log(xhr);
@@ -222,7 +222,7 @@ conesole.log(filesToUpload);
             window.history.back();
           }
         });
-        //window.history.back();
+
         };
 
         function goMyCloset() {

@@ -8,7 +8,7 @@ exports.view = function(req, res){
 exports.getTops = function(req, res){
 	var email = req.params.user;
 	var category = req.params.category;
-	console.log ("email: " + email + " category: " + category);
+	//console.log ("email: " + email + " category: " + category);
 	
 	models.Closet
 		.find(
@@ -17,7 +17,7 @@ exports.getTops = function(req, res){
 		.exec(findTops);
 
 	function findTops(err, topsDB) {
-		console.log(topsDB);
+		//console.log(topsDB);
 		res.render('tops', {'tops_list': topsDB});
 	}
 };

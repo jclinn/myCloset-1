@@ -5,8 +5,8 @@ function createOutfit() {
 	var shoe = localStorage.getItem("shoeimage");
 	var extra = localStorage.getItem("extraimage");
 
-	console.log("user: " + user + " top " + top + 
-		" pant " + pant + " shoe " + shoe + " extra " + extra);
+	//console.log("user: " + user + " top " + top + 
+	//	" pant " + pant + " shoe " + shoe + " extra " + extra);
 
 	var album = localStorage.getItem("album");
 
@@ -21,6 +21,7 @@ function createOutfit() {
 
 	//console.log(json);
 
+	//call to push to db for outfit creation
 	$.post('/createoutfit/new', json, function() {
 		window.location.href = '/outfitcreated';
 	});

@@ -12,21 +12,25 @@ function initializePage() {
 
 	$('#loginbt').click(function(e) {
 	  e.preventDefault();
-	  //console.log('clicked');
+	  
 	  var email = $('#loginForm #email').val();
 	  var password = $('#loginForm #password').val();
 	  
 	  var url_call ='/login/'+email+'/'+password;
-	  console.log("email: " + email + " password " + password);
+	  //console.log("email: " + email + " password " + password);
 
+	  // check if valid user
 	  function checkUser(user_json) {
 	  	//console.log("email from db " + user_json['email'] + " password: " +
 	  	//	user_json['password']);
 	  	var emailDB = user_json['email'];
 	  	var passwordDB = user_json['password'];
+
+	  	// if db returns invalid, then no user found
 	  	if(emailDB=="invalid") {
 	  		alert("User not found, please sign up");
 	  	}
+	  	// check if users match
 	  	else if((emailDB==email) && (passwordDB==password)) {
 	  		//console.log("user email matches");
 	  		localStorage.setItem("user", emailDB);

@@ -5,10 +5,11 @@ exports.view = function(req, res){
   res.render("extra");
 };
 
+// get extras from db by user
 exports.getExtra = function(req, res){
 	var email = req.params.user;
 	var category = req.params.category;
-	console.log ("email: " + email + " category: " + category);
+	//console.log ("email: " + email + " category: " + category);
 	
 	models.Closet
 		.find(

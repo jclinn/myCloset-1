@@ -1,3 +1,4 @@
+//delete options found in settings
 function deleteCloset() {
 	var user = localStorage.getItem("user");
 	var json = {

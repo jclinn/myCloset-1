@@ -11,7 +11,7 @@ $(document).ready(function() {
 function initializePage() {
 	var user = localStorage.getItem("user");
 	var category= localStorage.getItem("category");
-	console.log("/pants/"+ user+ "/" + category);
+	//console.log("/pants/"+ user+ "/" + category);
 	var url_call = '/pants/'+user+'/'+category;
 	$.get(url_call);
 

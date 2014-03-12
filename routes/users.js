@@ -12,7 +12,7 @@ exports.view = function(req, res){
     .exec(renderUsers);
 
   function renderUsers(err, users) {
-    console.log("are you rendering?");
+    //console.log("are you rendering?");
     res.render('users', { 'users': users });
   }
 

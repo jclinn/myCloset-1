@@ -4,6 +4,8 @@ exports.view = function(req, res){
   res.render('login');
 };
 
+
+//login: checks if user is in db
 exports.userInfo = function(req, res){
 	var userEmail = req.params.user;
 	var password = req.params.password;
@@ -15,6 +17,7 @@ exports.userInfo = function(req, res){
 
 	function findUser(err, user_post) {
 		console.log (user_post[0]);
+		// if no user in db then pass in invalid for check 
 		if(user_post[0]==null) {
 			res.json(		{
 			"email": "invalid"

@@ -9,9 +9,11 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 var mongoose = require('mongoose');
 
+// index and project are examples
 var index = require('./routes/index');
 var project = require('./routes/project');
-// Example route
+
+//include controller files
 var login = require('./routes/login');
 var signup = require('./routes/signup');
 var home = require('./routes/home');
@@ -119,6 +121,7 @@ app.get('/cameratest', cameratest.view);
 app.get('/outfitsviewed', outfitsviewed.view);
 app.get('/intro', intro.view);
 
+// post calls to db
 app.post('/signup/new', signup.signup);
 app.post('/camera/new', camera.camera);
 app.post('/createoutfit/new', createoutfit.addOutfit);
